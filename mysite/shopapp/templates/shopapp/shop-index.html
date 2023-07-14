@@ -6,12 +6,12 @@
 
 {% block body %}
     <h1 align="center">
-        Hello Shop Index
+        {{ header | title }}
     </h1>
 
     <div>
         <ul>
-            {% for name, price in products %}
+            {% for name, price in products reversed %}
                 <li><h3>{{ name }} for ${{ price }}</h3></li>
             {% empty %}
                 No products here.
@@ -24,7 +24,13 @@
     </div>
 
     <div>
-        <h4 align="left" style="color:#5c6994">{% lorem 3 p random %}</h4>
+        {% filter force_escape|upper %}
+            This text will be HTML-escaped, and will appear in all uppercase.
+        {% endfilter %}
+    </div>
+
+    <div>
+        <h4 align="left" style="color:#5c6994; font-size: 20px">{% lorem 2 p random %}</h4>
     </div>
 
 {% endblock %}
