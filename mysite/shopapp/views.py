@@ -4,7 +4,6 @@ from timeit import default_timer
 from django.utils import timezone
 
 
-
 def shop_index(request: HttpRequest):
     products = [
         ('Laptop', 1999),

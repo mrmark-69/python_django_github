@@ -28,9 +28,12 @@
             This text will be HTML-escaped, and will appear in all uppercase.
         {% endfilter %}
     </div>
-
     <div>
         <h4 align="left" style="color:#5c6994; font-size: 20px">{% lorem 2 p random %}</h4>
     </div>
-
+    <div>
+        {% with message=1 %}
+            <h2>1+2={{ message|add:2 }}</h2>
+        {% endwith %}
+    </div>
 {% endblock %}

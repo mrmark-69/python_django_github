@@ -13,11 +13,12 @@
     Base body
 {% endblock %}
 <div>
-    <h3>{% now 'H:i' %}</h3>
+    <h3>{% now 'e H:i a' %}</h3>
 </div>
 <div>
     {% now 'l' as current_week_day %}
     <h3>Today is {{ current_week_day }} {{ time_now }}</h3>
+    {{ localtime }}
 </div>
 
 </body>
