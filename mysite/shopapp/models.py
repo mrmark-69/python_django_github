@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Product(models.Model):
+    class Meta:
+        ordering = ["price", "name"]
+        # db_table = "tech_products"
+        # verbose_name_plural = "products"
+
     name = models.CharField(max_length=100)
     description = models.TextField(null=False, blank=True)
     price = models.DecimalField(default=0, max_digits=8, decimal_places=2)

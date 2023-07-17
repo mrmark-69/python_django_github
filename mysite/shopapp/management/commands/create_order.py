@@ -7,7 +7,7 @@ from shopapp.models import Order
 class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write("Create order")
-        user = User.objects.get(username="mrmark")
+        user = User.objects.first()
         order = Order.objects.get_or_create(
             delivery_address="Russkaya str 90",
             promocode="PROMO123",
