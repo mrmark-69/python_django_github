@@ -13,6 +13,7 @@
         <ul>
             {% for name, price in products reversed %}
                 <li><h3>{{ name }} for ${{ price }}</h3></li>
+                <hr>
             {% empty %}
                 No products here.
             {% endfor %}

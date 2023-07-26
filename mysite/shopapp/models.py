@@ -16,6 +16,16 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     archived = models.BooleanField(default=False)
 
+    # @property
+    # def description_short(self) -> str:
+    #     if len(f"{self.description}") > 48:
+    #         return f"{self.description[:48]}..."
+    #     else:
+    #         return f"{self.description}"
+
+    def __str__(self) -> str:
+        return f"Product(id={self.pk}, name={self.name!r})"
+
 
 class Order(models.Model):
     delivery_address = models.TextField(null=True, blank=True)
