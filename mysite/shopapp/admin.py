@@ -35,7 +35,7 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
     list_display = "id", "name", "description_short", "price", "discount", "archived",
     list_display_links = "id", "name",
     ordering = "id", "name",
-    search_fields = "name", "description",
+    search_fields = "name", "description", "id"
     fieldsets = [
         (None, {
             "fields": ("name", "description"),

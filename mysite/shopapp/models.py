@@ -1,15 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # Create your models here.
 class Product(models.Model):
     class Meta:
-        ordering = ["price", "name"]
+        ordering = ["-created_at", "price", "name"]
         # db_table = "tech_products"
         # verbose_name_plural = "products"
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, verbose_name="Name of product")
     description = models.TextField(null=False, blank=True)
     price = models.DecimalField(default=0, max_digits=8, decimal_places=2)
     discount = models.SmallIntegerField(default=0)
@@ -25,6 +26,9 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return f"Product(id={self.pk}, name={self.name!r})"
+
+    # def get_absolute_url(self):
+    #     return reverse("products", kwargs={"products_name": self.pk})
 
 
 class Order(models.Model):
