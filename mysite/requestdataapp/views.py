@@ -25,10 +25,10 @@ def handle_file_upload(request: HttpRequest) -> HttpResponse:
     if request.method == "POST" and request.FILES.get("myfile"):
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
-        if myfile.size > 2.5e6:
-            print("File size exceeded")
+        if myfile.size > 2.62144e6:
+            return render(request, "requestdataapp/file-upload.html",
+                          {"message": "Не удалось загрузить. Превышен размер файла в 2.5 мб"})
         else:
-            print("Allowed file size")
             filename = fs.save(myfile.name, myfile)
-            print(f"Saved file {filename}")
+            return render(request, "requestdataapp/file-upload.html", {"message": f"Файл '{filename}' успешно загружен."})
     return render(request, "requestdataapp/file-upload.html")
