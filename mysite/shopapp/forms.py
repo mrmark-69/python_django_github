@@ -15,6 +15,8 @@ class OrderForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["user"].empty_label = 'select customer'
+        self.fields["user"].label = "Customer"
+
 
     class Meta:
         model = Order
