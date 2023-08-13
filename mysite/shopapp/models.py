@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.urls import reverse
+# from django.urls import reverse
 
 
 # Create your models here.
 class Product(models.Model):
     class Meta:
-        ordering = ["-created_at", "price", "name"]
+        ordering = ["created_at", "price", "name"]
         # db_table = "tech_products"
         # verbose_name_plural = "products"
 

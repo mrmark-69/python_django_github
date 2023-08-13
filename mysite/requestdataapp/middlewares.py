@@ -44,7 +44,7 @@ class ThrottlingMiddleware(MiddlewareMixin):
         # Проверка, превышен ли лимит запросов для данного IP-адреса
         # Если адрес есть в кэше, то сообщение о превышении количества запросов.
         if cache.get(ip_address):
-            return HttpResponse('Too many requests', status=429)
+            return HttpResponse('Too many requests')
 
         # Установка лимита запросов
         cache.set(ip_address, True, 2)

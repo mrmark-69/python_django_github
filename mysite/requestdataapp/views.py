@@ -2,6 +2,8 @@ from django.core.files.storage import FileSystemStorage
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
+from .forms import UserBioForm, UploadFileForm
+
 
 # Create your views here.
 def process_get_weiv(request: HttpRequest) -> HttpResponse:
@@ -18,22 +20,25 @@ def process_get_weiv(request: HttpRequest) -> HttpResponse:
 
 
 def user_form(request: HttpRequest) -> HttpResponse:
-    return render(request, "requestdataapp/user-bio-form.html")
+    context = {
+        "form": UserBioForm()
+    }
+    return render(request, "requestdataapp/user-bio-form.html", context=context)
 
 
 def handle_file_upload(request: HttpRequest) -> HttpResponse:
-    if request.method == "POST" and request.FILES.get("myfile"):
-        myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        # Проверка размера загружаемого файла.
-        if myfile.size > 2.62144e6:
-            # Если размер превышен, выводится сообщение с предупреждением.
-            return render(request, "requestdataapp/file-upload.html",
-                          {"message": "Failed to load. File size exceeded 2.5 mb"})
-        else:
+    if request.method == "POST":
+        form = UploadFileForm(request.POST, request.FILES)
+        # Проверка на заполненность формы данными.
+        if form.is_valid():
+            myfile = form.cleaned_data["file"]
+            fs = FileSystemStorage()
             # Сохраняем файл
             filename = fs.save(myfile.name, myfile)
             # Выводим сообщение о сохранении файла.
             return render(request, "requestdataapp/file-upload.html",
-                          {"message": f"File '{filename}' uploaded successfully."})
-    return render(request, "requestdataapp/file-upload.html")
+                              {"message": f"File '{filename}' uploaded successfully.", "form": form})
+    else:
+        form = UploadFileForm()
+
+    return render(request, "requestdataapp/file-upload.html", {"form": form})
