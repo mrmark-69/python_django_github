@@ -17,13 +17,16 @@ class OrderForm(forms.ModelForm):
         self.fields["user"].empty_label = 'select customer'
         self.fields["user"].label = "Customer"
 
-
     class Meta:
         model = Order
         fields = ["user", "products", "delivery_address", "promocode", ]
         widgets = {
             'delivery_address': forms.Textarea(attrs={"cols": "40", "rows": "5"}),
         }
+
+    products = forms.ModelMultipleChoiceField(queryset=Product.objects.all(),
+                                              widget=forms.CheckboxSelectMultiple,
+                                              )
 
     def clean_delivery_address(self):
         delivery = self.cleaned_data['delivery_address']
