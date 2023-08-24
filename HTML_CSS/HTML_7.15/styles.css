@@ -1,0 +1,245 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7f9;
+}
+
+.button_2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    height: 100px;
+    padding: 0  40px;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 0%;
+}
+
+.fixed-container {
+    max-width: 1280px;
+    height: 150%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-info .fixed-container > h2 {
+    font-size: 48px;
+    margin-bottom: 80px;
+    padding-bottom: 10px;
+    width: 55%;
+}
+
+.fixed-container > h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    width: 55%;
+}
+
+
+a {
+    color: black;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div > span {
+    font-size: 20px;
+    margin-left: 35px;
+    margin-right: 15px;
+}
+
+section {
+    padding: 40px;
+    margin-bottom: 35px;
+}
+
+.first-block {
+    height: 400px;
+    margin-top: -80px;
+    margin-bottom: 190px;
+}
+
+.first-block > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("images/man.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.first-block > div > p {
+    font-size: 20px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.services img {
+    /* margin-top: 20px; */
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.services > div {
+    width: 210px;
+}
+
+.services > div > p {
+    margin-bottom: 50px;
+}
+
+.examples {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.examples img {
+    width: 400px;
+    margin: auto;
+}
+
+.examples > div {
+    margin-bottom: 25px;
+    width: 300px;
+}
+
+.price-info {
+    background-color: #3f2aff;
+    margin-top: 65px;
+    margin-bottom: 28px;
+    padding: 35px 40px 70px 40px;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.price-info > div > p {
+    margin-top: 40px;
+    padding-bottom: 32px;
+    font-size: 15px;
+    width: 50%;
+}
+
+button {
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.light-button {
+    border: 1px solid black;
+    background-color: transparent;
+    margin-bottom: 15px;
+}
+
+.dark-button {
+    border: 1px solid #3f2aff;
+    background-color: #3f2aff;
+    color: white;
+}
+
+.green_button {
+    padding: 15px 35px;
+    border-radius: 5px;
+    border: 1px solid #0a6612;
+    background-color: #0a6612;
+    font-size: medium;
+    color: white;
+}
+
+.red_button {
+    padding: 15px 35px;
+    border-radius: 5px;
+    border: 1px solid #e20337;
+    background-color: #e20337;
+    font-size: medium;
+    color: white;
+}
+
+.form-control {
+    width: 278px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin: 10px auto 15px auto;
+    font-size: medium;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 10px;
+    padding: 40px;
+    width: 100%;
+}
+
+.footer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.footer > div > div {
+    padding-left: 0%;
+}
+
+.footer > div > div > p > span {
+    text-align: right;
+    font-size: 20px;
+}
+
+.footer > div > div > p > a {
+    margin-right: 30px;
+}
+
+.popup-container {
+    background-color: #000000b3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    width: 310px;
+    height: 305px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.footer-button {
+    margin-bottom: 25px;
+    margin-left: 15px;
+}
