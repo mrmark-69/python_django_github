@@ -25,7 +25,7 @@ class Product(models.Model):
     #         return f"{self.description}"
 
     def __str__(self) -> str:
-        return f"Product(id={self.pk}, name={self.name!r})"
+        return f"Product(pk={self.pk}, name={self.name!r})"
 
     # def get_absolute_url(self):
     #     return reverse("products", kwargs={"products_name": self.pk})

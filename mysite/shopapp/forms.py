@@ -1,8 +1,15 @@
 from django import forms
 from django.core.exceptions import ValidationError
-
+from django.contrib.auth.models import Group
+from django.forms import ModelForm
 # from django.core import validators
 from .models import Product, Order
+
+
+class GroupForm(ModelForm):
+    class Meta:
+        model = Group
+        fields = ["name"]
 
 
 class ProductForm(forms.ModelForm):
