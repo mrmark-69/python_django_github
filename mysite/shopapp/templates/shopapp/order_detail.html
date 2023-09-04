@@ -15,10 +15,18 @@
 Product in order:
 <ul>
     {% for product in object.products.all %}
-    <li>{{ product.name }} for $ {{ product.price }}</li>
+    <li><a href="{% url 'shopapp:product_details' pk=product.pk %}" target="_blank"
+        >{{ product.name }} for $ {{ product.price }}</a></li>
+
     {% endfor %}
 </ul>
 <div>
-    <a href="{% url 'shopapp:orders_list' %}">Back to orders</a>
+    <p><a href="{% url 'shopapp:orders_list' %}" target="_self" >Back to orders</a></p>
+</div>
+<div>
+    <p><a href="{% url 'shopapp:order_update' pk=object.pk%}" target="_self" >Update order</a></p>
+</div>
+<div>
+    <a href="{% url 'shopapp:order_delete' pk=object.pk%}" target="_self" >Delete order</a>
 </div>
 {% endblock %}

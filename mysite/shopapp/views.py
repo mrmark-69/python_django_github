@@ -10,6 +10,7 @@ from django.views.generic import TemplateView, ListView, DetailView, CreateView,
 
 from .forms import ProductForm, OrderForm, GroupForm
 from .models import Product, Order
+from django import forms
 
 
 class ShopIndexView(View):
@@ -106,4 +107,20 @@ class OrderCreateView(CreateView):
     model = Order
     fields = "user", "promocode", "delivery_address", "products"
     success_url = reverse_lazy("shopapp:orders_list")
-    
+
+
+class OrderUpdateView(UpdateView):
+    model = Order
+    fields = "promocode", "delivery_address", "products"
+    template_name_suffix = "_update_form"
+
+    def get_success_url(self):
+        return reverse(
+            "shopapp:order_details",
+            kwargs={"pk": self.object.pk},
+        )
+
+
+class OrderDeleteView(DeleteView):
+    model = Order
+    success_url = reverse_lazy("shopapp:orders_list")

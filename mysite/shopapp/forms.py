@@ -33,7 +33,6 @@ class OrderForm(forms.ModelForm):
     products = forms.ModelMultipleChoiceField(queryset=Product.objects.all(),
                                               widget=forms.CheckboxSelectMultiple,
                                               )
-
     def clean_delivery_address(self):
         delivery = self.cleaned_data['delivery_address']
         if len(delivery) == 0:
