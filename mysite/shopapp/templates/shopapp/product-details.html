@@ -13,6 +13,12 @@
         <div>Archived: {{ product.archived }}</div>
     </div>
     <div>
+        <p></p><a href="{% url 'shopapp:product_update' pk=product.pk %}">Update product</a></p>
+    </div>
+    <div>
+        <p><a href="{% url 'shopapp:product_archive' pk=product.pk %}">Archive product</a></p>
+    </div>
+    <div>
         <a href="{% url 'shopapp:products_list' %}">Back to products list</a>
     </div>
 {% endblock %}
