@@ -40,3 +40,12 @@ class OrderForm(forms.ModelForm):
         if len(delivery) == 0:
             raise ValidationError("Заполните адрес доставки.")
         return delivery
+
+
+class ConfirmForm(forms.Form):
+    confirm_action = forms.BooleanField(required=False)
+
+    def clean(self):
+        if self.cleaned_data['confirm_action'] is False:
+            raise ValidationError('You must confirm this form')
+        return super(ConfirmForm, self).clean()

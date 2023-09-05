@@ -7,11 +7,10 @@ from timeit import default_timer
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views import View
-from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import ProductForm, OrderForm, GroupForm
+from .forms import OrderForm, GroupForm, ConfirmForm
 from .models import Product, Order
-from django import forms
 
 
 class ShopIndexView(View):
@@ -78,6 +77,7 @@ class ProductUpdateView(UpdateView):
 
 class ProductArchiveView(DeleteView):
     model = Product
+    form_class = ConfirmForm
     success_url = reverse_lazy("shopapp:products_list")
     template_name_suffix = "_confirm_archive"
 
@@ -125,3 +125,4 @@ class OrderUpdateView(UpdateView):
 class OrderDeleteView(DeleteView):
     model = Order
     success_url = reverse_lazy("shopapp:orders_list")
+    form_class = ConfirmForm
