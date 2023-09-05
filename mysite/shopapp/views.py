@@ -1,3 +1,4 @@
+from django.forms import CheckboxSelectMultiple
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group
@@ -105,13 +106,13 @@ class OrderDetailView(DetailView):
 
 class OrderCreateView(CreateView):
     model = Order
-    fields = "user", "promocode", "delivery_address", "products"
+    form_class = OrderForm
     success_url = reverse_lazy("shopapp:orders_list")
 
 
 class OrderUpdateView(UpdateView):
     model = Order
-    fields = "promocode", "delivery_address", "products"
+    form_class = OrderForm
     template_name_suffix = "_update_form"
 
     def get_success_url(self):

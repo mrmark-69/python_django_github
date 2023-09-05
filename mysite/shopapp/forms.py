@@ -22,6 +22,7 @@ class OrderForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["user"].empty_label = 'select customer'
         self.fields["user"].label = "Customer"
+        self.fields["products"].queryset = Product.objects.filter(archived=False)
 
     class Meta:
         model = Order
@@ -33,6 +34,7 @@ class OrderForm(forms.ModelForm):
     products = forms.ModelMultipleChoiceField(queryset=Product.objects.all(),
                                               widget=forms.CheckboxSelectMultiple,
                                               )
+
     def clean_delivery_address(self):
         delivery = self.cleaned_data['delivery_address']
         if len(delivery) == 0:
