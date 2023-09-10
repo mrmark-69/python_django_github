@@ -13,7 +13,6 @@ urlpatterns = [
         ),
         name="login"
     ),
-    # path("logout/", views.logout_view, name="logout"),
     path("logout/", views.MyLogoutView.as_view(), name="logout"),
     path("cookie/get/", views.get_cookie_view, name="cookie-get"),
     path("cookie/set/", views.set_cookie_view, name="cookie-set"),
