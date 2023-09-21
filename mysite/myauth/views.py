@@ -1,9 +1,15 @@
+from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
 from django.views import View
+from django.views.generic import CreateView, TemplateView
+
+from myauth.forms import RegisterUserForm
+from myauth.models import Profile
 
 
 # def login_view(request: HttpRequest) -> HttpResponse:
@@ -28,8 +34,30 @@ from django.views import View
 #     return redirect(reverse('myauth:login'))
 
 
+class AboutMeView(TemplateView):
+    template_name = 'myauth/about-me.html'
+
+
 class MyLogoutView(LogoutView):
     next_page = reverse_lazy('myauth:login')
+
+
+class RegisterUserView(CreateView):
+    form_class = RegisterUserForm
+    template_name = "myauth/register.html"  # Имя шаблона
+    success_url = reverse_lazy('myauth:about-me')  # Переход на страницу с профайлом.
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        Profile.objects.create(user=self.object)
+        username = form.cleaned_data.get("username")
+        password = form.cleaned_data.get("password1")
+        user = authenticate(self.request,
+                            username=username,
+                            password=password
+                            )
+        login(request=self.request, user=user)
+        return response
 
 
 def set_cookie_view(request: HttpRequest) -> HttpResponse:
@@ -43,11 +71,13 @@ def get_cookie_view(request: HttpRequest) -> HttpResponse:
     return HttpResponse(f"Cookie value: {value!r}")
 
 
+@permission_required("myauth.view_profile", raise_exception=True)
 def set_session_view(request: HttpRequest) -> HttpResponse:
     request.session["foobar"] = "spameggs"
     return HttpResponse("Session set!")
 
 
+@login_required
 def get_session_view(request: HttpRequest) -> HttpResponse:
     value = request.session.get("foobar", "default")
     return HttpResponse(f"Session value {value!r}")

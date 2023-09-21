@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'myauth/base.html'%}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block body %}
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Register</button>
+</form>
+<!--<div>-->
+<!--    <p><a href="{% url 'myauth:login' %}" target="_self" >Login</a></p>-->
+<!--</div>-->
+{% endblock %}
