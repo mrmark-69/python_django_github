@@ -18,7 +18,7 @@ class ShopIndexView(View):
         products = [
             ('Laptop', 1999),
             ('Desktop', 2999),
-            ('Smartphone', 999),
+            ('Smartphone', 899),
         ]
         context = {
             "time_now": timezone.now(),
