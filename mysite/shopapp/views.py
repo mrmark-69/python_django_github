@@ -60,7 +60,7 @@ class ProductsListView(ListView):
 class ProductCreateView(UserPassesTestMixin, CreateView):
     def test_func(self):
         user = self.request.user
-        return self.request.user.is_superuser or user.has_perm('add_product')
+        return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
     fields = "name", "price", "description", "discount"
@@ -75,7 +75,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
     def test_func(self):
         user = self.request.user
         product = get_object_or_404(Product, pk=self.kwargs['pk'])
-        return user.is_superuser or user.has_perm('change_product') or product.created_by == user
+        return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
     fields = "name", "price", "description", "discount"
@@ -83,7 +83,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
 
     def get_success_url(self):
         return reverse(
-            "shopapp:product_details",
+            viewname="shopapp:product_details",
             kwargs={"pk": self.object.pk},
         )
 
