@@ -60,7 +60,7 @@ class ProductsListView(ListView):
 class ProductCreateView(UserPassesTestMixin, CreateView):
     def test_func(self):
         user = self.request.user
-        return self.request.user.is_superuser or user.has_perm('add_product')
+        return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
     fields = "name", "price", "description", "discount"
@@ -74,8 +74,8 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
 class ProductUpdateView(UserPassesTestMixin, UpdateView):
     def test_func(self):
         user = self.request.user
-        product = get_object_or_404(Product, pk=self.kwargs['pk'])
-        return user.is_superuser or user.has_perm('change_product') or product.created_by == user
+        product = self.get_object()  # get_object_or_404(Product, pk=self.kwargs['pk'])
+        return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
     fields = "name", "price", "description", "discount"
