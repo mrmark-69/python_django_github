@@ -88,7 +88,12 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
         )
 
 
-class ProductArchiveView(DeleteView):
+class ProductArchiveView(UserPassesTestMixin, DeleteView):
+    def test_func(self):
+        user = self.request.user
+        product = self.get_object()
+        return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
+
     model = Product
     form_class = ConfirmForm
     success_url = reverse_lazy("shopapp:products_list")
@@ -109,7 +114,7 @@ class OrdersListView(LoginRequiredMixin, ListView):
     )
 
 
-class OrderDetailView(PermissionRequiredMixin, DetailView):
+class OrderDetailView(LoginRequiredMixin, DetailView):
     permission_required = "shopapp.view_order"
     queryset = (
         Order.objects
@@ -118,13 +123,21 @@ class OrderDetailView(PermissionRequiredMixin, DetailView):
     )
 
 
-class OrderCreateView(CreateView):
+class OrderCreateView(UserPassesTestMixin, CreateView):
+    def test_func(self):
+        user = self.request.user
+        return user.is_superuser or user.has_perm('shopapp.add_order')
+
     model = Order
     form_class = OrderForm
     success_url = reverse_lazy("shopapp:orders_list")
 
 
-class OrderUpdateView(UpdateView):
+class OrderUpdateView(UserPassesTestMixin, UpdateView):
+    def test_func(self):
+        user = self.request.user
+        return user.is_superuser or user.has_perm('shopapp.change_order')
+
     model = Order
     form_class = OrderForm
     template_name_suffix = "_update_form"
@@ -136,7 +149,11 @@ class OrderUpdateView(UpdateView):
         )
 
 
-class OrderDeleteView(DeleteView):
+class OrderDeleteView(UserPassesTestMixin, DeleteView):
+    def test_func(self):
+        user = self.request.user
+        return user.is_superuser or user.has_perm('shopapp.change_order')
+
     model = Order
     success_url = reverse_lazy("shopapp:orders_list")
     form_class = ConfirmForm
