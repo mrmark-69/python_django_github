@@ -6,7 +6,6 @@ from .admin_mixins import ExportAsCsvMixin
 from .models import Product, Order
 
 
-# Register your models here.
 class OrderInline(admin.TabularInline):
     model = Product.orders.through
 
@@ -43,6 +42,10 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
         ("Price options", {
             "fields": ("price", "discount"),
             "classes": ("collapse", "wide"),
+        }),
+        ("Create options", {
+            "fields":("created_by",),
+            "classes": ("collapse",)
         }),
         ("Extra options", {"fields": ("archived",),
                            "classes": ("collapse",),

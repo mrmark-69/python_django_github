@@ -23,4 +23,5 @@ urlpatterns = [
 
     path("session/get/", views.get_session_view, name="session-get"),
     path("session/set/", views.set_session_view, name="session-set"),
+    path("foo-bar/", views.FooBarView.as_view(), name="foo-bar"),
 ]

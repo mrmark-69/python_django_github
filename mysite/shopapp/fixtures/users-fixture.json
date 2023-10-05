@@ -1,0 +1,110 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Zpu76sogtwFlaXIKYflwZC$bTPT0JGLnDYNxBj1RSCNBwpGS0Fk6a/BQwxukV4cYHw=",
+      "last_login": "2023-10-05T00:47:20Z",
+      "is_superuser": true,
+      "username": "mrmark",
+      "first_name": "Mark",
+      "last_name": "",
+      "email": "mrmark@yandex.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-07-08T14:24:56Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$j10R8EbeyrN9XfNeyLb84l$UJfb1jFGWyfPN0bmeBS4LAd2oHuNuCqWQYMelrBabc0=",
+      "last_login": "2023-10-04T11:46:10.389Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-17T13:47:37Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": [
+        32,
+        25,
+        26,
+        28
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$xLFmYd0ESdpkDcNY2PYCni$wnIePQGnDB8AErpMNQJsiYu9SgSNir7MCmrryClFySk=",
+      "last_login": "2023-10-04T11:51:07.754Z",
+      "is_superuser": false,
+      "username": "Samuel",
+      "first_name": "Samuel",
+      "last_name": "Jackson",
+      "email": "sam@mail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-21T09:59:21Z",
+      "groups": [],
+      "user_permissions": [
+        26,
+        28
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$V9MZtGHIbwfBVNeJ3Dvys3$EPit/WfObH5goLauLbP2EAI0Bh4Chao9eLUV5Wg+W8w=",
+      "last_login": "2023-10-05T00:47:08.519Z",
+      "is_superuser": false,
+      "username": "Nemo",
+      "first_name": "",
+      "last_name": "Captain",
+      "email": "nemo@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-21T10:04:16Z",
+      "groups": [],
+      "user_permissions": [
+        25,
+        28
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$ClvxTDozmnTJShqcluIlrA$6QPNgn2N+FCSCkDu8pCnTMtrRfQAg6IlRskFUxoLmeo=",
+      "last_login": "2023-09-21T12:14:23.066Z",
+      "is_superuser": false,
+      "username": "Unknown",
+      "first_name": "",
+      "last_name": "",
+      "email": "un@mail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-21T11:59:37Z",
+      "groups": [],
+      "user_permissions": [
+        32,
+        28
+      ]
+    }
+  }
+]

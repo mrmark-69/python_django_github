@@ -2,9 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# from django.urls import reverse
-##
-
 class Product(models.Model):
     class Meta:
         ordering = ["created_at", "price", "name"]
@@ -19,18 +16,8 @@ class Product(models.Model):
     archived = models.BooleanField(default=False)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
-    # @property
-    # def description_short(self) -> str:
-    #     if len(f"{self.description}") > 48:
-    #         return f"{self.description[:48]}..."
-    #     else:
-    #         return f"{self.description}"
-
     def __str__(self) -> str:
         return f"Product(pk={self.pk}, name={self.name!r})"
-
-    # def get_absolute_url(self):
-    #     return reverse("products", kwargs={"products_name": self.pk})
 
 
 class Order(models.Model):
