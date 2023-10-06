@@ -4,7 +4,8 @@ from django.contrib.auth.models import User, Permission
 from django.test import TestCase
 from django.urls import reverse
 
-from shopapp.models import Product
+from mysite import settings
+from shopapp.models import Product, Order
 
 
 class ShopIndexTestCase(TestCase):
@@ -102,3 +103,53 @@ class OrdersListViewTestCase(TestCase):
     def test_orders_view(self):
         response = self.client.get(reverse('shopapp:orders_list'))
         self.assertContains(response, 'Orders')
+
+    def test_orders_view_not_authenticated(self):
+        self.client.logout()
+        response = self.client.get(reverse('shopapp:orders_list'))
+        self.assertEqual(response.status_code, 302)
+        self.assertIn(str(settings.LOGIN_URL), response.url)
+
+
+class OrderDetailViewTestCase(TestCase):
+    fixtures = [
+        'users-fixture.json',
+        'products-fixture.json',
+        'orders-fixture.json',
+        'groups-fixture.json'
+    ]
+
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.user = User.objects.create_user(username='admin_plus', password='admin')
+        permission = Permission.objects.get(codename='view_order')
+        cls.user.user_permissions.add(permission)
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls.user.delete()
+        super().tearDownClass()
+
+    def setUp(self):
+        self.client.force_login(self.user)
+        self.order = Order.objects.create(
+            delivery_address="04778, 30527 Schultz Ford, Lake Rosendochester, South Carolina",
+            promocode="promoCode_12_3",
+            user=self.user
+        )
+        self.order.products.set([29, 30, 31, 32])
+        super().setUp()
+
+    def tearDown(self):
+        self.order.delete()
+        super().tearDown()
+
+    def test_order_details(self):
+        response = self.client.get(reverse('shopapp:order_details', args=[self.order.pk]))
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(self.order.delivery_address, response.content.decode())
+        self.assertIn(self.order.promocode, response.content.decode())
+
+        context_order = response.context['order']
+        self.assertEqual(context_order.pk, self.order.pk)

@@ -11,5 +11,44 @@
       "archived": false,
       "created_by": 1
     }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 30,
+    "fields": {
+      "name": "Product_2",
+      "description": "without description",
+      "price": "43.00",
+      "discount": 5,
+      "created_at": "2023-10-05T11:38:52.563Z",
+      "archived": false,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 31,
+    "fields": {
+      "name": "Product_4",
+      "description": "Created_by Admin",
+      "price": "234.00",
+      "discount": 5,
+      "created_at": "2023-10-05T11:40:48.349Z",
+      "archived": false,
+      "created_by": 2
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 32,
+    "fields": {
+      "name": "Product_3",
+      "description": "Created_by Nemo",
+      "price": "535.00",
+      "discount": 0,
+      "created_at": "2023-10-05T11:42:53.576Z",
+      "archived": false,
+      "created_by": 9
+    }
   }
 ]

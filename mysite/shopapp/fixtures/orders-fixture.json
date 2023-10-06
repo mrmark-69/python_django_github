@@ -1,14 +1,17 @@
 [
   {
     "model": "shopapp.order",
-    "pk": 1,
+    "pk": 2,
     "fields": {
-      "delivery_address": "Papua New Guinea, Miklukho Maklay str.",
-      "promocode": "promoCode_12_3",
-      "created_at": "2023-09-21T11:00:21.545Z",
-      "user": 8,
+      "delivery_address": "На Луну",
+      "promocode": "Promo06",
+      "created_at": "2023-10-06T09:50:10.840Z",
+      "user": 1,
       "products": [
-        1
+        29,
+        30,
+        31,
+        32
       ]
     }
   }
