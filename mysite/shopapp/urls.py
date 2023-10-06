@@ -1,28 +1,22 @@
 from django.urls import path
-from .views import (ShopIndexView,
-                    GroupsListView,
-                    ProductDetailsView,
-                    ProductsListView,
-                    OrdersListView,
-                    OrderDetailView,
-                    ProductCreateView,
-                    ProductUpdateView,
-                    ProductArchiveView,
-                    OrderCreateView, OrderUpdateView, OrderDeleteView,
-                    )
+
+from . import views
+
 app_name = 'shopapp'
 
 urlpatterns = [
-    path("", ShopIndexView.as_view(), name="index"),
-    path("groups/", GroupsListView.as_view(), name="groups_list"),
-    path("products/", ProductsListView.as_view(), name="products_list"),
-    path("products/create/", ProductCreateView.as_view(), name="product_create"),
-    path("products/<int:pk>/", ProductDetailsView.as_view(), name="product_details"),
-    path("products/<int:pk>/update/", ProductUpdateView.as_view(), name="product_update"),
-    path("products/<int:pk>/archive/", ProductArchiveView.as_view(), name="product_archive"),
-    path("orders/", OrdersListView.as_view(), name="orders_list"),
-    path("orders/<int:pk>", OrderDetailView.as_view(), name="order_details"),
-    path("orders/create", OrderCreateView.as_view(), name="order_create"),
-    path("orders/<int:pk>/update/", OrderUpdateView.as_view(), name="order_update"),
-    path("orders/<int:pk>/delete/", OrderDeleteView.as_view(), name="order_delete"),
+    path("", views.ShopIndexView.as_view(), name="index"),
+    path("groups/", views.GroupsListView.as_view(), name="groups_list"),
+    path("products/", views.ProductsListView.as_view(), name="products_list"),
+    path("products/export/", views.ProductDataExportView.as_view(), name="products_export"),
+    path("products/create/", views.ProductCreateView.as_view(), name="product_create"),
+    path("products/<int:pk>/", views.ProductDetailsView.as_view(), name="product_details"),
+    path("products/<int:pk>/update/", views.ProductUpdateView.as_view(), name="product_update"),
+    path("products/<int:pk>/archive/", views.ProductArchiveView.as_view(), name="product_archive"),
+    path("orders/", views.OrdersListView.as_view(), name="orders_list"),
+    path("orders/export/", views.OrdersExportView.as_view(), name="orders_export"),
+    path("orders/<int:pk>", views.OrderDetailView.as_view(), name="order_details"),
+    path("orders/create/", views.OrderCreateView.as_view(), name="order_create"),
+    path("orders/<int:pk>/update/", views.OrderUpdateView.as_view(), name="order_update"),
+    path("orders/<int:pk>/delete/", views.OrderDeleteView.as_view(), name="order_delete"),
 ]

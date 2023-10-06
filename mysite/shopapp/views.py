@@ -1,5 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
-from django.http import HttpResponse, HttpRequest, HttpResponseRedirect
+from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group, User
 from timeit import default_timer
@@ -106,6 +106,21 @@ class ProductArchiveView(UserPassesTestMixin, DeleteView):
         return HttpResponseRedirect(success_url)
 
 
+class ProductDataExportView(View):
+    def get(self, request: HttpRequest) -> JsonResponse:
+        products = Product.objects.order_by("pk").all()
+        products_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": product.price,
+                "archived": product.archived,
+            }
+            for product in products
+        ]
+
+        return JsonResponse({"products": products_data})
+
 class OrdersListView(LoginRequiredMixin, ListView):
     queryset = (
         Order.objects
@@ -157,3 +172,22 @@ class OrderDeleteView(UserPassesTestMixin, DeleteView):
     model = Order
     success_url = reverse_lazy("shopapp:orders_list")
     form_class = ConfirmForm
+
+
+class OrdersExportView(UserPassesTestMixin, View):
+    def test_func(self):
+        user = self.request.user
+        return user.is_staff
+
+    def get(self, request: HttpRequest) -> JsonResponse:
+        orders = Order.objects.order_by("pk").all()
+        orders_data = [
+            {"pk": order.pk,
+             "delivery_address": order.delivery_address,
+             "promocode": order.promocode,
+             "user": order.user.pk,
+             "products": [product.pk for product in order.products.all()]
+             }
+            for order in orders
+        ]
+        return JsonResponse({"orders": orders_data})

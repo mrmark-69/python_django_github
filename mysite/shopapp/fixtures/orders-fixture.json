@@ -1,18 +1,1 @@
-[
-  {
-    "model": "shopapp.order",
-    "pk": 2,
-    "fields": {
-      "delivery_address": "На Луну",
-      "promocode": "Promo06",
-      "created_at": "2023-10-06T09:50:10.840Z",
-      "user": 1,
-      "products": [
-        29,
-        30,
-        31,
-        32
-      ]
-    }
-  }
-]
+[{"model": "shopapp.order", "pk": 2, "fields": {"delivery_address": "Av de Mayo 1370, Buenos Aires, Ciudad Autónoma de Buenos Aires, C1085ABE", "promocode": "Promo06", "created_at": "2023-10-06T09:50:10.840Z", "user": 1, "products": [29, 30, 31, 32]}}, {"model": "shopapp.order", "pk": 3, "fields": {"delivery_address": "4778, 30527 Schultz Ford, Lake Rosendochester, South Carolina", "promocode": "Autum06", "created_at": "2023-10-06T12:46:10.609Z", "user": 1, "products": [29, 30, 32]}}, {"model": "shopapp.order", "pk": 4, "fields": {"delivery_address": "480, Faustino Allende, Alta Córdoba, Córdoba, Pedanía Capital, Córdoba", "promocode": "", "created_at": "2023-10-06T12:49:33.540Z", "user": 2, "products": [29, 31]}}, {"model": "shopapp.order", "pk": 5, "fields": {"delivery_address": "123567, Lenina str 103, Moscow city, Russia", "promocode": "autum_10", "created_at": "2023-10-06T13:01:19.604Z", "user": 8, "products": [29, 32]}}]

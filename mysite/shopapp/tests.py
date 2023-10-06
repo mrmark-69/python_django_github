@@ -85,6 +85,29 @@ class ProductsListViewTestCase(TestCase):
         self.assertTemplateUsed(response, 'shopapp/products-list.html')
 
 
+class ProductsExportTestCase(TestCase):
+    fixtures = [
+        'users-fixture.json',
+        'products-fixture.json',
+        'groups-fixture.json'
+    ]
+    def test_get_products_view(self):
+        response = self.client.get(reverse("shopapp:products_export"))
+        self.assertEqual(response.status_code, 200)
+        products = Product.objects.order_by("pk").all()
+        expected_data = [
+            {
+                "pk": product.pk,
+                "name": product.name,
+                "price": str(product.price),
+                "archived": product.archived,
+            }
+            for product in products
+        ]
+        products_data = response.json()
+        self.assertEqual(products_data["products"], expected_data)
+
+
 class OrdersListViewTestCase(TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -134,22 +157,62 @@ class OrderDetailViewTestCase(TestCase):
     def setUp(self):
         self.client.force_login(self.user)
         self.order = Order.objects.create(
-            delivery_address="04778, 30527 Schultz Ford, Lake Rosendochester, South Carolina",
+            delivery_address="4778, 30527 Schultz Ford, Lake Rosendochester, South Carolina",
             promocode="promoCode_12_3",
             user=self.user
         )
         self.order.products.set([29, 30, 31, 32])
-        super().setUp()
 
     def tearDown(self):
         self.order.delete()
-        super().tearDown()
 
     def test_order_details(self):
         response = self.client.get(reverse('shopapp:order_details', args=[self.order.pk]))
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.order.delivery_address, response.content.decode())
         self.assertIn(self.order.promocode, response.content.decode())
+        self.assertIn(self.order.user.username, response.content.decode())
 
         context_order = response.context['order']
         self.assertEqual(context_order.pk, self.order.pk)
+
+
+class OrdersExportTestCase(TestCase):
+    fixtures = [
+        'users-fixture.json',
+        'products-fixture.json',
+        'orders-fixture.json',
+        'groups-fixture.json'
+    ]
+
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.user = User.objects.create_user(username="Timofey", password='12345&Y')  # Создаю пользователя.
+        cls.user.is_staff = True  # Наделяю пользователя правами.
+        cls.user.save()  # Сохраняю пользователя с правами.
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.user.delete()  # Удаляю пользователя.
+        super().tearDownClass()
+
+    def setUp(self):
+        self.client.force_login(self.user)  # Выполняет вход пользователя
+
+    def test_orders_list_get(self):
+        response = self.client.get(reverse('shopapp:orders_export'), )
+        self.assertEqual(response.status_code, 200)
+        orders = Order.objects.order_by("pk").all()
+        expected_data = [
+            {"pk": order.pk,
+             "delivery_address": order.delivery_address,
+             "promocode": order.promocode,
+             "user": order.user.pk,
+             "products": [product.pk for product in order.products.all()]
+             }
+            for order in orders
+        ]
+        orders_data = response.json()
+
+        self.assertEqual(orders_data['orders'], expected_data, )
