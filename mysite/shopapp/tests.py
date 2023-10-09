@@ -91,6 +91,7 @@ class ProductsExportTestCase(TestCase):
         'products-fixture.json',
         'groups-fixture.json'
     ]
+
     def test_get_products_view(self):
         response = self.client.get(reverse("shopapp:products_export"))
         self.assertEqual(response.status_code, 200)
@@ -135,12 +136,6 @@ class OrdersListViewTestCase(TestCase):
 
 
 class OrderDetailViewTestCase(TestCase):
-    fixtures = [
-        'users-fixture.json',
-        'products-fixture.json',
-        'orders-fixture.json',
-        'groups-fixture.json'
-    ]
 
     @classmethod
     def setUpClass(cls):
