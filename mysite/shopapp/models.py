@@ -2,6 +2,10 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+def product_preview_directory_path(instance: "Product", filename: str) -> str:
+    return f"products/product_{instance.pk}/preview/{filename}"
+
+
 class Product(models.Model):
     class Meta:
         ordering = ["created_at", "price", "name"]
@@ -15,6 +19,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     archived = models.BooleanField(default=False)
     created_by = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    preview = models.ImageField(null=True, blank=True, upload_to=product_preview_directory_path)
 
     def __str__(self) -> str:
         return f"Product(pk={self.pk}, name={self.name!r})"
@@ -26,4 +31,8 @@ class Order(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     products = models.ManyToManyField(Product, related_name="orders")
+<<<<<<< HEAD
     receipt = models.FileField(null=True, upload_to='orders/receipts/')
+=======
+    receipt = models.FileField(null=True, upload_to='orders/receipts')
+>>>>>>> slave

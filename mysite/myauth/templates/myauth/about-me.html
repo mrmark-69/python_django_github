@@ -4,7 +4,7 @@
     About me
 {% endblock %}
 {% block body %}
-    <h1>User info</h1>
+    <h1>User info:</h1>
 {% if user.is_authenticated %}
     <h2>Detail</h2>
     <p>Username: {{ user.username }}</p>
@@ -12,7 +12,25 @@
     <p>Last name: {{ user.last_name }}</p>
     <p>Email: {{ user.email }}</p>
     <p>Bio: {{ user.profile.bio }}</p>
+    {% if user.profile.avatar %}
+        <img src="{{ user.profile.avatar.url}}" alt="{{ user.profile.avatar.name }}">
+    {% else %}
+        The user did not upload a photo
+    {% endif %}
 {% else %}
     <h2>User is anonymous</h2>
 {% endif %}
+{% if user.is_staff or request.user == user.profile.user %}
+    <div>
+        <p><a href="{% url 'myauth:avatar_update' pk=user.profile.pk%}"><h3>Change avatar >></h3></a></p>
+    </div>
+{% endif %}
+{% if request.user == user.profile.user %}
+    <div>
+        <p><a href="{% url 'myauth:profile_update' pk=user.profile.pk%}"><h3>Change profile >></h3></a></p>
+    </div>
+{% endif %}
+    <div>
+        <p><a href="{% url 'myauth:users_list' %}"><h3><< Back to users list</h3></a></p>
+    </div>
 {% endblock %}

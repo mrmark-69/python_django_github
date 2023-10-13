@@ -17,6 +17,10 @@ urlpatterns = [
     path("register/", views.RegisterUserView.as_view(), name="register"),
     path("logout/", views.MyLogoutView.as_view(), name="logout"),
     path("about-me/", views.AboutMeView.as_view(), name="about-me"),
+    path("about-me/<int:pk>/", views.UserDetailsView.as_view(), name="user_details"),
+    path("users/", views.UsersListView.as_view(), name="users_list"),
+    path("about-me/avatar/<int:pk>/update/", views.AvatarUpdateView.as_view(), name="avatar_update"),
+    path("about-me/<int:pk>/update/", views.ProfileUpdateView.as_view(), name="profile_update"),
 
     path("cookie/get/", views.get_cookie_view, name="cookie-get"),
     path("cookie/set/", views.set_cookie_view, name="cookie-set"),

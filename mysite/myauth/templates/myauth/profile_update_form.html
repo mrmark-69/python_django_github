@@ -1,0 +1,23 @@
+{% extends 'myauth/base.html' %}
+
+{% block title %}
+    Update user data
+{% endblock %}
+
+{% block body %}
+    <h1>Change profile for {{profile.user}}</h1>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update</button>
+        </form>
+    </div>
+    <div>
+        <p><a href="{% url 'myauth:user_details' pk=profile.user.pk %}"
+        ><h3><b><< Back to {{ profile.user }}</b></h3></a></p>
+    </div>
+    <div>
+        <a href="{% url 'myauth:users_list' %}"><h3><b><< Back to users list</b></h3></a>
+    </div>
+{% endblock %}
