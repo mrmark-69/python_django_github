@@ -63,7 +63,7 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
         return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
-    fields = "name", "price", "description", "discount"
+    fields = "name", "price", "description", "discount", "preview"
     success_url = reverse_lazy('shopapp:products_list')
 
     def form_valid(self, form):
@@ -74,11 +74,11 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
 class ProductUpdateView(UserPassesTestMixin, UpdateView):
     def test_func(self):
         user = self.request.user
-        product = self.get_object()  # get_object_or_404(Product, pk=self.kwargs['pk'])
+        product = self.get_object()
         return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
-    fields = "name", "price", "description", "discount"
+    fields = "name", "price", "description", "discount", "preview"
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
@@ -120,6 +120,7 @@ class ProductDataExportView(View):
         ]
 
         return JsonResponse({"products": products_data})
+
 
 class OrdersListView(LoginRequiredMixin, ListView):
     queryset = (

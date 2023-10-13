@@ -26,11 +26,10 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
         mark_archived,
         mark_unarchived,
         "export_csv",
-        ]
+    ]
     inlines = [
         OrderInline,
     ]
-    # list_display = "id", "name", "description", "price", "discount"
     list_display = "id", "name", "description_short", "price", "discount", "archived",
     list_display_links = "id", "name",
     ordering = "id", "name",
@@ -44,7 +43,7 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
             "classes": ("collapse", "wide"),
         }),
         ("Create options", {
-            "fields":("created_by",),
+            "fields": ("created_by",),
             "classes": ("collapse",)
         }),
         ("Extra options", {"fields": ("archived",),
@@ -59,7 +58,6 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
         return obj.description
 
 
-# class ProductInline(admin.TabularInline):
 class ProductInline(admin.StackedInline):
     model = Order.products.through
 
@@ -77,4 +75,3 @@ class OrderAdmin(admin.ModelAdmin):
     def user_verbose(self, obj: Order) -> str:
         return obj.user.first_name or obj.user.username
 
-# admin.site.register(Product, ProductAdmin)
