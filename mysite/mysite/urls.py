@@ -25,10 +25,7 @@ urlpatterns = [
     path('req/', include('requestdataapp.urls')),
     path('accounts/', include('myauth.urls')),
 ]
-<<<<<<< HEAD
 
-=======
->>>>>>> slave
 if settings.DEBUG:
     urlpatterns.extend(
         static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
