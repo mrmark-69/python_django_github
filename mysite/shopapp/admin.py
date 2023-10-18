@@ -3,11 +3,15 @@ from django.db.models import QuerySet
 from django.http import HttpRequest
 
 from .admin_mixins import ExportAsCsvMixin
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 
 
 class OrderInline(admin.TabularInline):
     model = Product.orders.through
+
+
+class ProductInlineImage(admin.StackedInline):
+    model = ProductImage
 
 
 @admin.action(description="Archive products")
@@ -29,6 +33,7 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
     ]
     inlines = [
         OrderInline,
+        ProductInlineImage,
     ]
     list_display = "id", "name", "description_short", "price", "discount", "archived",
     list_display_links = "id", "name",
@@ -41,6 +46,9 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
         ("Price options", {
             "fields": ("price", "discount"),
             "classes": ("collapse", "wide"),
+        }),
+        ("Images", {
+            "fields": ("preview",),
         }),
         ("Create options", {
             "fields": ("created_by",),
@@ -74,4 +82,3 @@ class OrderAdmin(admin.ModelAdmin):
 
     def user_verbose(self, obj: Order) -> str:
         return obj.user.first_name or obj.user.username
-

@@ -9,8 +9,8 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import OrderForm, GroupForm, ConfirmForm
-from .models import Product, Order
+from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm
+from .models import Product, Order, ProductImage
 
 
 class ShopIndexView(View):
@@ -47,7 +47,8 @@ class GroupsListView(View):
 
 class ProductDetailsView(DetailView):
     template_name = "shopapp/product-details.html"
-    model = Product
+    # model = Product
+    queryset = Product.objects.prefetch_related("images")
     context_object_name = "product"
 
 
@@ -63,12 +64,19 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
         return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
-    fields = "name", "price", "description", "discount", "preview"
+    # fields = "name", "price", "description", "discount", "preview"
+    form_class = ProductForm
     success_url = reverse_lazy('shopapp:products_list')
 
     def form_valid(self, form):
+        response = super().form_valid(form)
         form.instance.created_by = self.request.user
-        return super().form_valid(form)
+        for image in form.files.getlist("images"):
+            ProductImage.objects.create(
+                product=self.object,
+                image=image,
+            )
+        return response
 
 
 class ProductUpdateView(UserPassesTestMixin, UpdateView):
@@ -78,7 +86,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
         return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
-    fields = "name", "price", "description", "discount", "preview"
+    form_class = ProductForm
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
@@ -86,6 +94,16 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
             "shopapp:product_details",
             kwargs={"pk": self.object.pk},
         )
+
+    def form_valid(self, form):
+        response = super().form_valid(form)
+        for image in form.files.getlist("images"):
+            ProductImage.objects.create(
+                product=self.object,
+                image=image,
+            )
+
+        return response
 
 
 class ProductArchiveView(UserPassesTestMixin, DeleteView):

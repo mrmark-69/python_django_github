@@ -25,6 +25,16 @@ class Product(models.Model):
         return f"Product(pk={self.pk}, name={self.name!r})"
 
 
+def product_images_directory_path(instance: "ProductImage", filename: str) -> str:
+    return f"products/product_{instance.product.pk}/images/{filename}"
+
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="images")
+    image = models.ImageField(upload_to=product_images_directory_path)
+    description = models.CharField(max_length=200, null=False, blank=True)
+
+
 class Order(models.Model):
     delivery_address = models.TextField(null=True, blank=True)
     promocode = models.CharField(max_length=20, null=False, blank=True)
@@ -32,4 +42,3 @@ class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.PROTECT)
     products = models.ManyToManyField(Product, related_name="orders")
     receipt = models.FileField(null=True, upload_to='orders/receipts/')
-
