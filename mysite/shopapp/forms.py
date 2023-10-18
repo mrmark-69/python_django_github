@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import Group
 from django.forms import ModelForm
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 
 
 class GroupForm(ModelForm):
@@ -30,6 +30,12 @@ class MultipleFileField(forms.FileField):
 
 
 class ProductForm(forms.ModelForm):
+    uploaded_images = forms.ModelMultipleChoiceField(
+        queryset=ProductImage.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        required=False,
+    )
+
     class Meta:
         model = Product
         fields = ["name", "price", "description", "discount", "preview"]

@@ -34,6 +34,9 @@ class ProductImage(models.Model):
     image = models.ImageField(upload_to=product_images_directory_path)
     description = models.CharField(max_length=200, null=False, blank=True)
 
+    def __str__(self):
+        return self.image.name#[27:]
+
 
 class Order(models.Model):
     delivery_address = models.TextField(null=True, blank=True)

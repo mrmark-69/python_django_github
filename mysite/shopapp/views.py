@@ -1,3 +1,5 @@
+import os
+
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
@@ -64,7 +66,6 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
         return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
-    # fields = "name", "price", "description", "discount", "preview"
     form_class = ProductForm
     success_url = reverse_lazy('shopapp:products_list')
 
@@ -97,6 +98,24 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
 
     def form_valid(self, form):
         response = super().form_valid(form)
+        # Получение списка ранее загруженных изображений для данного продукта
+        existing_images = ProductImage.objects.all()
+
+        # Получение списка выбранных изображений для удаления
+        uploaded_images = form.cleaned_data.get('uploaded_images', [])
+
+        # Удаление выбранных изображений
+        for image_id in uploaded_images:
+            image = existing_images.filter(id=image_id.pk).first()
+            if image:
+                file_path = f"{os.getcwd()}/uploads/{image.image}"
+                try:
+                    os.remove(file_path)
+                except OSError as e:
+                    print(f"Ошибка удаления файла: {e}")
+                image.delete()
+
+        # Сохранение выбранных изображений
         for image in form.files.getlist("images"):
             ProductImage.objects.create(
                 product=self.object,
