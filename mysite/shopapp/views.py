@@ -96,19 +96,22 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
             kwargs={"pk": self.object.pk},
         )
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['pk'] = self.kwargs['pk']
+        return kwargs
+
     def form_valid(self, form):
         response = super().form_valid(form)
-        # Получение списка ранее загруженных изображений для данного продукта
-        existing_images = ProductImage.objects.all()
 
         # Получение списка выбранных изображений для удаления
-        uploaded_images = form.cleaned_data.get('uploaded_images', [])
+        images_to_delete = form.cleaned_data.get('downloaded_images_select_to_delete', [])
 
         # Удаление выбранных изображений
-        for image_id in uploaded_images:
-            image = existing_images.filter(id=image_id.pk).first()
+        for image_id in images_to_delete:
+            image = ProductImage.objects.filter(id=image_id.pk).first()
             if image:
-                file_path = f"{os.getcwd()}/uploads/{image.image}"
+                file_path = f"./uploads/{image.image}"
                 try:
                     os.remove(file_path)
                 except OSError as e:

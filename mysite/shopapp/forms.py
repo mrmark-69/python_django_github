@@ -30,17 +30,22 @@ class MultipleFileField(forms.FileField):
 
 
 class ProductForm(forms.ModelForm):
-    uploaded_images = forms.ModelMultipleChoiceField(
+    downloaded_images_select_to_delete = forms.ModelMultipleChoiceField(
         queryset=ProductImage.objects.all(),
         widget=forms.CheckboxSelectMultiple,
         required=False,
     )
 
+    def __init__(self, *args, **kwargs):
+        product_id = kwargs.pop('pk')
+        super(ProductForm, self).__init__(*args, **kwargs)
+        self.fields['downloaded_images_select_to_delete'].queryset = ProductImage.objects.filter(product_id=product_id)
+
     class Meta:
         model = Product
         fields = ["name", "price", "description", "discount", "preview"]
 
-    images = MultipleFileField()
+    images = MultipleFileField(required=False)
 
 
 class OrderForm(forms.ModelForm):
