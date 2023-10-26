@@ -11,7 +11,7 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm
+from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdateForm
 from .models import Product, Order, ProductImage
 
 
@@ -27,6 +27,7 @@ class ShopIndexView(View):
             "time_running": default_timer(),
             "products": products,
             "header": "hello shop index",
+            "items": 4,
         }
         return render(request, 'shopapp/shop-index.html', context=context)
 
@@ -87,7 +88,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
         return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
-    form_class = ProductForm
+    form_class = ProductUpdateForm
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
@@ -104,10 +105,8 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
     def form_valid(self, form):
         response = super().form_valid(form)
 
-        # Получение списка выбранных изображений для удаления
-        images_to_delete = form.cleaned_data.get('downloaded_images_select_to_delete', [])
+        images_to_delete = form.cleaned_data.get('images_to_delete', [])
 
-        # Удаление выбранных изображений
         for image_id in images_to_delete:
             image = ProductImage.objects.filter(id=image_id.pk).first()
             if image:
@@ -118,7 +117,6 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
                     print(f"Ошибка удаления файла: {e}")
                 image.delete()
 
-        # Сохранение выбранных изображений
         for image in form.files.getlist("images"):
             ProductImage.objects.create(
                 product=self.object,

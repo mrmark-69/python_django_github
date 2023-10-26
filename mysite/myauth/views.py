@@ -10,6 +10,24 @@ from django.views.generic import CreateView, TemplateView, UpdateView, DetailVie
 
 from myauth.forms import RegisterUserForm, ProfileUpdateForm
 from myauth.models import Profile
+from django.utils.translation import gettext_lazy as _, ngettext
+
+
+class HelloView(View):
+    wellcome_message = _("wellcome hello world")
+
+    def get(self, request: HttpRequest) -> HttpResponse:
+        items_str = request.GET.get("items") or 0
+        items = int(items_str)
+        products_line = ngettext(
+            "one product",
+            "{count} products",
+            items,
+        )
+        products_line = products_line.format(count=items)
+        return HttpResponse(
+            f"<h1>{self.wellcome_message}</h1>"
+            f"\n<h2>{products_line}</h2>")
 
 
 class AboutMeView(TemplateView):
