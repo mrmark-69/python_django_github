@@ -1,5 +1,7 @@
 {% extends 'shopapp/base.html' %}
 
+{% load i18n %}
+
 {% block title %}
     Shop Index
 {% endblock %}
@@ -19,7 +21,21 @@
             {% endfor %}
         </ul>
     </div>
-
+    <div>
+        <strong>
+            You have{{ items }} item {{ items|pluralize}}
+        </strong>
+    </div>
+    <div>
+        <strong>
+            You have {{ items }} class{{ items|pluralize:"es"}}
+        </strong>
+    </div>
+    <div>
+        <strong>
+            You have {{ items }} cherr{{ items|pluralize:"y,ies"}}
+        </strong>
+    </div>
     <div>
         <h4>Time running: {{ time_running }}</h4>
     </div>

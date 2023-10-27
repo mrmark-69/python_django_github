@@ -2,7 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import Group
 from django.forms import ModelForm
-from .models import Product, Order
+from .models import Product, Order, ProductImage
 
 
 class GroupForm(ModelForm):
@@ -34,7 +34,22 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = ["name", "price", "description", "discount", "preview"]
 
-    images = MultipleFileField()
+    images = MultipleFileField(required=False)
+
+
+class ProductUpdateForm(ProductForm):
+    images_to_delete = forms.ModelMultipleChoiceField(
+        queryset=ProductImage.objects.all(),
+        widget=forms.CheckboxSelectMultiple,
+        label= "Already existing images:",
+        help_text="mark to delete.",
+        required=False,
+    )
+
+    def __init__(self, *args, **kwargs):
+        product_id = kwargs.pop('pk')
+        super(ProductUpdateForm, self).__init__(*args, **kwargs)
+        self.fields['images_to_delete'].queryset = ProductImage.objects.filter(product_id=product_id)
 
 
 class OrderForm(forms.ModelForm):
@@ -58,7 +73,7 @@ class OrderForm(forms.ModelForm):
     def clean_delivery_address(self):
         delivery = self.cleaned_data['delivery_address']
         if len(delivery) == 0:
-            raise ValidationError("Заполните адрес доставки.")
+            raise ValidationError("Fill in the delivery address.")
         return delivery
 
 

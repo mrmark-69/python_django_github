@@ -1,3 +1,5 @@
+import os
+
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin, UserPassesTestMixin
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
@@ -9,7 +11,7 @@ from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
-from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm
+from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdateForm
 from .models import Product, Order, ProductImage
 
 
@@ -25,6 +27,7 @@ class ShopIndexView(View):
             "time_running": default_timer(),
             "products": products,
             "header": "hello shop index",
+            "items": 4,
         }
         return render(request, 'shopapp/shop-index.html', context=context)
 
@@ -64,7 +67,6 @@ class ProductCreateView(UserPassesTestMixin, CreateView):
         return self.request.user.is_superuser or user.has_perm('shopapp.add_product')
 
     model = Product
-    # fields = "name", "price", "description", "discount", "preview"
     form_class = ProductForm
     success_url = reverse_lazy('shopapp:products_list')
 
@@ -86,7 +88,7 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
         return user.is_superuser or user.has_perm('shopapp.change_product') or product.created_by == user
 
     model = Product
-    form_class = ProductForm
+    form_class = ProductUpdateForm
     template_name_suffix = "_update_form"
 
     def get_success_url(self):
@@ -95,8 +97,26 @@ class ProductUpdateView(UserPassesTestMixin, UpdateView):
             kwargs={"pk": self.object.pk},
         )
 
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['pk'] = self.kwargs['pk']
+        return kwargs
+
     def form_valid(self, form):
         response = super().form_valid(form)
+
+        images_to_delete = form.cleaned_data.get('images_to_delete', [])
+
+        for image_id in images_to_delete:
+            image = ProductImage.objects.filter(id=image_id.pk).first()
+            if image:
+                file_path = f"./uploads/{image.image}"
+                try:
+                    os.remove(file_path)
+                except OSError as e:
+                    print(f"Ошибка удаления файла: {e}")
+                image.delete()
+
         for image in form.files.getlist("images"):
             ProductImage.objects.create(
                 product=self.object,
