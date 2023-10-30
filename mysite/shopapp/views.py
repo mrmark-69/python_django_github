@@ -10,9 +10,13 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from rest_framework.request import Request
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdateForm
 from .models import Product, Order, ProductImage
+from .serializers import ProductSerializer, OrderSerializer
 
 
 class ShopIndexView(View):
@@ -230,3 +234,17 @@ class OrdersExportView(UserPassesTestMixin, View):
             for order in orders
         ]
         return JsonResponse({"orders": orders_data})
+
+
+class ProductsListApiView(APIView):
+    def get(self, request: Request) -> Response:
+        products = Product.objects.all()
+        serialized = ProductSerializer(products, many=True)
+        return Response({"products": serialized.data})
+
+
+class OrdersListApiView(APIView):
+    def get(self, request: Request) -> Response:
+        orders = Order.objects.all()
+        serialized = OrderSerializer(orders, many=True)
+        return Response({"orders": serialized.data})
