@@ -1,15 +1,17 @@
-from rest_framework.serializers import ModelSerializer
+from rest_framework import serializers
 
 from shopapp.models import Product, Order
 
 
-class ProductSerializer(ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = "pk", "name", "price"
+        fields = "__all__"
+        # read_only_fields = ["archived"]
 
 
-class OrderSerializer(ModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
         fields = "__all__"
+        # read_only_fields = ["user"]

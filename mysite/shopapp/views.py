@@ -10,9 +10,7 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from rest_framework.request import Request
-from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 
 from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdateForm
 from .models import Product, Order, ProductImage
@@ -57,6 +55,11 @@ class ProductDetailsView(DetailView):
     # model = Product
     queryset = Product.objects.prefetch_related("images")
     context_object_name = "product"
+
+
+class ProductViewSet(ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
 
 
 class ProductsListView(ListView):
@@ -164,6 +167,11 @@ class ProductDataExportView(View):
         return JsonResponse({"products": products_data})
 
 
+class OrdersViewSet(ModelViewSet):
+    queryset = Order.objects.all()
+    serializer_class = OrderSerializer
+
+
 class OrdersListView(LoginRequiredMixin, ListView):
     queryset = (
         Order.objects
@@ -234,17 +242,3 @@ class OrdersExportView(UserPassesTestMixin, View):
             for order in orders
         ]
         return JsonResponse({"orders": orders_data})
-
-
-class ProductsListApiView(APIView):
-    def get(self, request: Request) -> Response:
-        products = Product.objects.all()
-        serialized = ProductSerializer(products, many=True)
-        return Response({"products": serialized.data})
-
-
-class OrdersListApiView(APIView):
-    def get(self, request: Request) -> Response:
-        orders = Order.objects.all()
-        serialized = OrderSerializer(orders, many=True)
-        return Response({"orders": serialized.data})
