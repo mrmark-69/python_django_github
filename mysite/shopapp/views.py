@@ -10,6 +10,8 @@ from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ModelViewSet
 
 from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdateForm
@@ -60,6 +62,19 @@ class ProductDetailsView(DetailView):
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    filter_backends = [
+        SearchFilter,
+        OrderingFilter
+    ]
+    search_fields = [  # Поля фильтрации для SearchFilter
+        "name",
+        "description",
+    ]
+    ordering_fields = [  # Поля фильтрации для OrderingFilter
+        "pk",
+        "price",
+        "discount"
+    ]
 
 
 class ProductsListView(ListView):
@@ -170,6 +185,21 @@ class ProductDataExportView(View):
 class OrdersViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
+    filter_backends = [
+        DjangoFilterBackend,
+        OrderingFilter
+    ]
+    filterset_fields = [  # Поля фильтрации для DjangoFilterBackend
+        "delivery_address",
+        "promocode",
+        "created_at",
+        "user",
+        "products"
+    ]
+    ordering_fields = [  # Поля фильтрации для OrderingFilter
+        "pk",
+        "created_at"
+    ]
 
 
 class OrdersListView(LoginRequiredMixin, ListView):
