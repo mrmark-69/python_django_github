@@ -1,11 +1,18 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
 
 from . import views
+from .views import ProductViewSet, OrdersViewSet
 
 app_name = 'shopapp'
 
+routers = DefaultRouter()
+routers.register("products", ProductViewSet)
+routers.register("orders", OrdersViewSet)
+
 urlpatterns = [
     path("", views.ShopIndexView.as_view(), name="index"),
+    path("api/", include(routers.urls)),
     path("groups/", views.GroupsListView.as_view(), name="groups_list"),
     path("products/", views.ProductsListView.as_view(), name="products_list"),
     path("products/export/", views.ProductDataExportView.as_view(), name="products_export"),
