@@ -7,6 +7,12 @@ def product_preview_directory_path(instance: "Product", filename: str) -> str:
 
 
 class Product(models.Model):
+    """
+    Model Product, represents the product,
+    which can be sold in an online store.
+
+    Orders here: :model:`shopapp.Order`
+    """
     class Meta:
         ordering = ["created_at", "price", "name"]
         # db_table = "tech_products"
