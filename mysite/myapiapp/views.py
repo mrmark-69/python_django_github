@@ -5,9 +5,7 @@ from rest_framework.mixins import ListModelMixin
 from rest_framework.response import Response
 from rest_framework.request import Request
 from rest_framework.throttling import UserRateThrottle
-from rest_framework.views import APIView
 
-from shopapp.models import Product, Order
 from .serializers import UserSerializer, GroupSerializer
 
 
