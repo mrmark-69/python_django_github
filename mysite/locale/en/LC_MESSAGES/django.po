@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 00:03+1000\n"
+"POT-Creation-Date: 2023-11-14 18:14+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blogapp/templates/blogapp/article_list.html:4
+msgid "Articles list"
+msgstr "Articles list"
+
+#: blogapp/templates/blogapp/article_list.html:8
+msgid "Articles"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:13
+msgid "Title"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:14
+msgid "Content"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:15
+msgid "Pub_date"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:16
+msgid "Author"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:17
+msgid "Category"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:18
+msgid "Tags"
+msgstr ""
+
+#: blogapp/templates/blogapp/article_list.html:24
+msgid "No articles yet"
+msgstr ""
 
 #: myauth/views.py:17
 msgid "wellcome hello world"
@@ -29,11 +65,11 @@ msgid_plural "{count} products"
 msgstr[0] "one product"
 msgstr[1] "{count} products."
 
-#: mysite/settings.py:129
+#: mysite/settings.py:137
 msgid "English"
 msgstr ""
 
-#: mysite/settings.py:130
+#: mysite/settings.py:138
 msgid "Russian"
 msgstr ""
 
@@ -62,7 +98,7 @@ msgstr ""
 msgid "Images"
 msgstr "Images"
 
-#: shopapp/templates/shopapp/product-details.html:29
+#: shopapp/templates/shopapp/product-details.html:27
 #, python-format
 msgid ""
 "\n"
@@ -81,19 +117,19 @@ msgstr[1] ""
 "                        The product has %(img_count)s images\n"
 "                    "
 
-#: shopapp/templates/shopapp/product-details.html:39
+#: shopapp/templates/shopapp/product-details.html:40
 msgid "No images uploaded yet"
 msgstr "No images uploaded yet"
 
-#: shopapp/templates/shopapp/product-details.html:44
+#: shopapp/templates/shopapp/product-details.html:45
 msgid "Update product"
 msgstr "Update product"
 
-#: shopapp/templates/shopapp/product-details.html:47
+#: shopapp/templates/shopapp/product-details.html:48
 msgid "Archive product"
 msgstr "Archive product"
 
-#: shopapp/templates/shopapp/product-details.html:50
+#: shopapp/templates/shopapp/product-details.html:51
 msgid "Back to products list"
 msgstr "Back to products list"
 

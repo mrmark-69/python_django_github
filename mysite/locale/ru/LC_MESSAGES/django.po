@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-27 00:00+1000\n"
+"POT-Creation-Date: 2023-11-14 18:14+1000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,42 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: blogapp/templates/blogapp/article_list.html:4
+msgid "Articles list"
+msgstr "Список статей"
+
+#: blogapp/templates/blogapp/article_list.html:8
+msgid "Articles"
+msgstr "Статьи"
+
+#: blogapp/templates/blogapp/article_list.html:13
+msgid "Title"
+msgstr "Название"
+
+#: blogapp/templates/blogapp/article_list.html:14
+msgid "Content"
+msgstr "Содержание"
+
+#: blogapp/templates/blogapp/article_list.html:15
+msgid "Pub_date"
+msgstr "Дата публикации"
+
+#: blogapp/templates/blogapp/article_list.html:16
+msgid "Author"
+msgstr "Автор"
+
+#: blogapp/templates/blogapp/article_list.html:17
+msgid "Category"
+msgstr "Категория"
+
+#: blogapp/templates/blogapp/article_list.html:18
+msgid "Tags"
+msgstr "Теги"
+
+#: blogapp/templates/blogapp/article_list.html:24
+msgid "No articles yet"
+msgstr "Пока нет опубликованных статей"
 
 #: myauth/views.py:17
 msgid "wellcome hello world"
@@ -31,11 +67,11 @@ msgstr[0] "{count} товар"
 msgstr[1] "{count} товара"
 msgstr[2] "{count} товаров"
 
-#: mysite/settings.py:129
+#: mysite/settings.py:137
 msgid "English"
 msgstr "Английский"
 
-#: mysite/settings.py:130
+#: mysite/settings.py:138
 msgid "Russian"
 msgstr "Русский"
 
@@ -72,7 +108,7 @@ msgstr ""
 msgid "Images"
 msgstr "Изображения"
 
-#: shopapp/templates/shopapp/product-details.html:29
+#: shopapp/templates/shopapp/product-details.html:27
 #, python-format
 msgid ""
 "\n"
@@ -95,19 +131,19 @@ msgstr[2] ""
 "                        У товара %(img_count)s изображений\n"
 "                    "
 
-#: shopapp/templates/shopapp/product-details.html:39
+#: shopapp/templates/shopapp/product-details.html:40
 msgid "No images uploaded yet"
 msgstr "Нет загруженных изображений"
 
-#: shopapp/templates/shopapp/product-details.html:44
+#: shopapp/templates/shopapp/product-details.html:45
 msgid "Update product"
 msgstr "Изменить товар"
 
-#: shopapp/templates/shopapp/product-details.html:47
+#: shopapp/templates/shopapp/product-details.html:48
 msgid "Archive product"
 msgstr "Архивировать товар"
 
-#: shopapp/templates/shopapp/product-details.html:50
+#: shopapp/templates/shopapp/product-details.html:51
 msgid "Back to products list"
 msgstr "Назад к списку товаров"
 
