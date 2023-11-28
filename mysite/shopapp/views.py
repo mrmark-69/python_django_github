@@ -5,7 +5,7 @@ Different views for an online store: by product, order, etc.
 """
 
 import os
-
+import logging
 from django.contrib.auth.mixins import (LoginRequiredMixin,
                                         UserPassesTestMixin)
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
@@ -26,6 +26,8 @@ from .forms import OrderForm, GroupForm, ConfirmForm, ProductForm, ProductUpdate
 from .models import Product, Order, ProductImage
 from .serializers import ProductSerializer, OrderSerializer
 
+log = logging.getLogger(__name__)
+
 
 class ShopIndexView(View):
     def get(self, request: HttpRequest) -> HttpResponse:
@@ -41,6 +43,8 @@ class ShopIndexView(View):
             "header": "hello shop index",
             "items": 4,
         }
+        log.debug("Products for shop index: %s", products)
+        log.info("Rendering shop index")
         return render(request, 'shopapp/shop-index.html', context=context)
 
 
@@ -105,6 +109,7 @@ class ProductsListView(ListView):
     template_name = 'shopapp/products-list.html'
     context_object_name = "products"
     queryset = Product.objects.filter(archived=False)
+
 
 
 class ProductCreateView(UserPassesTestMixin, CreateView):
