@@ -1,0 +1,47 @@
+2023-11-17 10:05:27,681 [INFO] shopapp.views Rendering shop index
+2023-11-17 10:06:16,761 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-11-17 10:06:17,371 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-18 09:34:45,203 [INFO] shopapp.views Rendering shop index
+2023-11-18 09:35:19,596 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-11-18 09:35:22,414 [INFO] django.utils.autoreload Watching for file changes with StatReloader autoreload
+2023-11-18 09:35:27,794 [INFO] shopapp.views Rendering shop index views
+2023-11-18 09:35:28,673 [INFO] shopapp.views Rendering shop index views
+2023-11-18 09:36:04,968 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading. autoreload
+2023-11-18 09:36:05,495 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-21 23:07:43,427 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-21 23:08:12,586 [WARNING] django.request Not Found: /favicon.ico
+2023-11-22 21:19:53,431 [WARNING] django.request Not Found: /favicon.ico
+2023-11-27 22:34:17,212 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-27 22:34:51,730 [WARNING] django.request Not Found: /favicon.ico
+2023-11-28 19:38:29,146 [WARNING] django.request Not Found: /favicon.ico
+2023-11-28 22:40:22,879 [WARNING] django.request Not Found: /favicon.ico
+2023-11-28 22:40:47,959 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/settings.py changed, reloading.
+2023-11-28 22:40:50,243 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-28 22:42:18,828 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-11-28 22:42:19,459 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-28 22:42:37,044 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-28 22:42:53,709 [ERROR] django.request Internal Server Error: /ru/shop/products/export/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 210, in get
+    division_by_zero = 1 / 0
+                       ~~^~~
+ZeroDivisionError: division by zero
+2023-11-28 22:47:06,540 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-11-28 22:47:07,589 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-28 22:50:38,596 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-11-28 22:50:40,109 [INFO] django.utils.autoreload Watching for file changes with StatReloader
