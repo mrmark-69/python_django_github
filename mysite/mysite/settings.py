@@ -14,7 +14,20 @@ from pathlib import Path
 
 from django.urls import reverse_lazy
 
-from django.utils.translation import gettext_lazy as _
+from django.utils.translation import gettext_lazy as gl
+
+import sentry_sdk
+
+sentry_sdk.init(
+    dsn="https://971ccb5456ea7692b36a85bd11e6bf72@o4506300167094273.ingest.sentry.io/4506300201959424",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,7 +41,22 @@ SECRET_KEY = 'django-insecure-@w47qqy5rc!93r86i93ou$!atsm89bx0j59!&b2*vg_ut$c8_m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0",
+    "127.0.0.1",
+]
+INTERNAL_IPS = [
+    "127.0.0.1"
+]
+
+if DEBUG:
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS.append("10.0.0.2")
+    INTERNAL_IPS.extend(
+        [ip[: ip.rfind(".")] + ".1" for ip in ips]
+    )
+
 
 # Application definition
 
@@ -42,6 +70,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.admindocs',
     'django_extensions',
+    'debug_toolbar',
     'rest_framework',
     'django_filters',
     'drf_spectacular',
@@ -63,6 +92,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.admindocs.middleware.XViewMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     # 'requestdataapp.middlewares.set_useragent_on_request_middleware',
     # 'requestdataapp.middlewares.CountRequestsMiddleware',
     # 'requestdataapp.middlewares.ThrottlingMiddleware',
@@ -134,8 +164,8 @@ LOCALE_PATHS = [
 ]
 
 LANGUAGES = [
-    ('en', _('English')),
-    ('ru', _('Russian')),
+    ('en', gl('English')),
+    ('ru', gl('Russian')),
 ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -151,28 +181,39 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = reverse_lazy('myauth:about-me')
 LOGIN_URL = reverse_lazy('myauth:login')
 
+LOGFILE_NAME = BASE_DIR / 'log.txt'
+LOGFILE_SIZE = 1 * 1024 * 1024
+LOGFILE_COUNT = 3
+
 LOGGING = {
-    'version': 1,
-    'filters': {
-        'require_debug_true': {
-            '()': 'django.utils.log.RequireDebugTrue',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "%(asctime)s [%(levelname)s] %(name)s %(message)s",
         },
     },
-    'handlers': {
-        'console': {
-            'level': 'DEBUG',
-            'filters': ['require_debug_true'],
-            'class': 'logging.StreamHandler',
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+        "logfile": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": LOGFILE_NAME,
+            "maxBytes": LOGFILE_SIZE,
+            "backupCount": LOGFILE_COUNT,
+            "formatter": "verbose",
         },
     },
-    'loggers': {
-        'django.db.backends': {
-            'level': 'DEBUG',
-            'handlers': ['console'],
-        }
+    "root": {
+        "handlers": [
+            "console",
+            "logfile"
+        ],
+        "level": "INFO",
     },
 }
-
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
