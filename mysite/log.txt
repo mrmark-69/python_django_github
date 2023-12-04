@@ -45,3 +45,73 @@ ZeroDivisionError: division by zero
 2023-11-28 22:47:07,589 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-11-28 22:50:38,596 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 2023-11-28 22:50:40,109 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 21:55:44,774 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 21:55:51,692 [WARNING] django.request Not Found: /myauth/cookie/get/
+2023-11-30 21:55:52,597 [WARNING] django.request Not Found: /favicon.ico
+2023-11-30 21:55:57,597 [WARNING] django.request Not Found: /myauth/
+2023-11-30 21:56:37,322 [WARNING] django.request Not Found: /myauth/
+2023-11-30 21:59:57,668 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/urls.py changed, reloading.
+2023-11-30 21:59:58,566 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:00:20,871 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/urls.py changed, reloading.
+2023-11-30 22:00:21,771 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:00:32,212 [WARNING] django.request Not Found: /accounts/
+2023-11-30 22:06:33,217 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:06:34,101 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:07:13,076 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:07:13,641 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:07:32,620 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:07:33,184 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:07:55,397 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:07:55,962 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:08:16,207 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:08:16,843 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:08:34,959 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:08:35,544 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:08:44,330 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:08:44,901 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:08:53,611 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:08:54,169 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:09:38,109 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:09:38,702 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:10:12,388 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:10:13,045 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-11-30 22:10:23,255 [WARNING] django.request Not Found: /ru/accounts/about-me/14/
+2023-11-30 22:10:49,460 [ERROR] django.request Internal Server Error: /ru/accounts/register/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 184, in post
+    return super().post(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/edit.py", line 152, in post
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/forms/forms.py", line 433, in full_clean
+    self._clean_fields()
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/forms/forms.py", line 448, in _clean_fields
+    value = getattr(self, "clean_%s" % name)()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py", line 21, in clean_email
+    if get_user_model().filter(email=email).exists():
+       ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'User' has no attribute 'filter'
+2023-11-30 22:16:07,809 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-11-30 22:16:08,551 [INFO] django.utils.autoreload Watching for file changes with StatReloader
