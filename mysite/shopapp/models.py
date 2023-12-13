@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 def product_preview_directory_path(instance: "Product", filename: str) -> str:
@@ -13,6 +14,7 @@ class Product(models.Model):
 
     Orders here: :model:`shopapp.Order`
     """
+
     class Meta:
         ordering = ["created_at", "price", "name"]
         # db_table = "tech_products"
@@ -30,6 +32,9 @@ class Product(models.Model):
 
     def __str__(self) -> str:
         return f"Product(pk={self.pk}, name={self.name!r})"
+
+    def get_absolute_url(self):
+        return reverse("shopapp:product_details", kwargs={"pk": self.pk})
 
 
 def product_images_directory_path(instance: "ProductImage", filename: str) -> str:
@@ -56,3 +61,6 @@ class Order(models.Model):
     class Meta:
         verbose_name = 'order'
         verbose_name_plural = 'orders'
+
+    def get_absolute_url(self):
+        return reverse("shopapp:order_details", kwargs={"pk": self.pk})

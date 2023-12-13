@@ -8,6 +8,7 @@ import os
 import logging
 from django.contrib.auth.mixins import (LoginRequiredMixin,
                                         UserPassesTestMixin)
+from django.contrib.syndication.views import Feed
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group, User
@@ -109,7 +110,6 @@ class ProductsListView(ListView):
     template_name = 'shopapp/products-list.html'
     context_object_name = "products"
     queryset = Product.objects.filter(archived=False)
-
 
 
 class ProductCreateView(UserPassesTestMixin, CreateView):
@@ -301,3 +301,18 @@ class OrdersExportView(UserPassesTestMixin, View):
             for order in orders
         ]
         return JsonResponse({"orders": orders_data})
+
+
+class LatestProductsFeed(Feed):
+    title = 'Shop products (latest)'
+    description = 'Updates on changes and addition products'
+    link = reverse_lazy("shopapp:products")
+
+    def items(self):
+        return Product.objects.filter(archived=False)
+
+    def item_name(self, item: Product):
+        return item.name
+
+    def item_description(self, item: Product):
+        return item.description[:20]
