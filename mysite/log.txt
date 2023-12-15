@@ -1638,3 +1638,368 @@ django.db.utils.IntegrityError: FOREIGN KEY constraint failed
 2023-12-13 20:07:23,681 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
 2023-12-13 20:07:29,592 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-12-13 20:08:28,598 [WARNING] django.request Not Found: /favicon.ico
+2023-12-13 20:17:44,872 [WARNING] django.request Not Found: /favicon.ico
+2023-12-13 20:39:14,943 [WARNING] django.request Not Found: /favicon.ico
+2023-12-14 12:30:21,254 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:30:28,599 [WARNING] django.request Not Found: /favicon.ico
+2023-12-14 12:35:44,477 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:35:45,316 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:36:19,070 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:36:19,774 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:36:24,317 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:36:24,967 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:36:46,461 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:36:47,095 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:36:58,613 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:36:59,168 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:37:32,797 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:37:33,613 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:38:31,141 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:38:32,146 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:39:11,091 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:39:11,698 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:39:40,011 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:39:40,625 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:40:58,940 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:40:59,511 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:41:07,268 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:41:07,927 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:41:25,014 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:41:25,579 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:41:46,955 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:41:47,528 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:42:15,078 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:42:15,670 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:42:32,141 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:42:32,854 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:42:54,322 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:42:54,902 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:42:58,555 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:42:59,128 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:43:52,442 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:43:53,170 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:44:13,393 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:44:14,008 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:46:42,814 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-14 12:46:43,539 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:48:50,824 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-14 12:48:51,434 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:49:22,848 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-14 12:49:23,685 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 12:49:29,844 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-14 12:49:30,419 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 13:19:28,657 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 13:19:43,437 [WARNING] django.request Method Not Allowed: /ru/shop/api/products/upload_csv/
+2023-12-14 20:22:32,024 [WARNING] django.request Not Found: /favicon.ico
+2023-12-14 20:49:10,178 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-12-14 20:49:14,382 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-14 21:01:18,467 [WARNING] django.request Not Found: /favicon.ico
+2023-12-15 09:29:04,907 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 09:29:08,261 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 09:29:39,698 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 09:29:40,275 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 09:29:44,865 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 09:29:45,636 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 09:33:03,090 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 09:33:06,184 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 10:02:57,948 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 10:03:01,559 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 10:04:33,338 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 10:04:33,919 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 10:05:52,060 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 10:05:52,810 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 10:06:15,030 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 10:06:15,602 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 10:08:16,365 [ERROR] django.request Internal Server Error: /ru/shop/api/orders/download_csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 301, in download_csv
+    writer.writerow(order_data)
+  File "/usr/lib/python3.11/csv.py", line 154, in writerow
+    return self.writer.writerow(self._dict_to_list(rowdict))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/csv.py", line 149, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: 'products'
+2023-12-15 10:09:53,063 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 10:09:53,701 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 11:58:09,542 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 11:58:15,771 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 11:59:41,764 [WARNING] django.request Not Found: /favicon.ico
+2023-12-15 12:23:33,724 [ERROR] django.request Internal Server Error: /ru/shop/api/orders/download_csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/options.py", line 681, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 293, in download_csv
+    for order in queryset:
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/query.py", line 398, in __iter__
+    self._fetch_all()
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1549, in execute_sql
+    sql, params = self.as_sql()
+                  ^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 736, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup(
+                                       ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 84, in pre_sql_setup
+    self.setup_query(with_col_aliases=with_col_aliases)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 73, in setup_query
+    self.select, self.klass_info, self.annotation_col_map = self.get_select(
+                                                            ^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 256, in get_select
+    select_mask = self.query.get_select_mask()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 805, in get_select_mask
+    return self._get_only_select_mask(opts, mask)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 780, in _get_only_select_mask
+    self._get_only_select_mask(
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/sql/query.py", line 768, in _get_only_select_mask
+    field = opts.get_field(field_name)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'pk'
+2023-12-15 12:24:03,446 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:24:06,886 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:24:09,218 [ERROR] django.request Internal Server Error: /ru/shop/api/orders/download_csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 294, in download_csv
+    order_data = ({
+                  ^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 295, in <dictcomp>
+    field: getattr(order, field)
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Order' object has no attribute 'user__id'
+2023-12-15 12:24:47,287 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:24:48,078 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:38:21,095 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:38:25,531 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:41:02,017 [ERROR] django.request Internal Server Error: /admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py", line 153, in import_csv
+    order = Order(
+            ^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'mrmark'": "Order.user" must be a "User" instance.
+2023-12-15 12:43:05,867 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:43:07,342 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:43:30,003 [ERROR] django.request Internal Server Error: /admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py", line 153, in import_csv
+    order = Order(
+            ^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'mrmark'": "Order.user" must be a "User" instance.
+2023-12-15 12:43:36,238 [ERROR] django.request Internal Server Error: /admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py", line 156, in import_csv
+    user=row['user']
+         ~~~^^^^^^^^
+KeyError: 'user'
+2023-12-15 12:43:49,102 [ERROR] django.request Internal Server Error: /admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py", line 153, in import_csv
+    order = Order(
+            ^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'admin'": "Order.user" must be a "User" instance.
+2023-12-15 12:44:27,930 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:44:28,800 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:45:45,201 [ERROR] django.request Internal Server Error: /admin/shopapp/order/import-orders-csv/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/contextlib.py", line 81, in inner
+    return func(*args, **kwds)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py", line 153, in import_csv
+    order = Order(
+            ^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/db/models/fields/related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'1'": "Order.user" must be a "User" instance.
+2023-12-15 12:46:30,647 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:46:31,462 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:50:23,734 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:50:24,456 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:51:54,788 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 12:51:55,442 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:52:37,356 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:52:37,961 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:53:58,359 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:53:59,068 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:54:23,317 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:54:23,990 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:54:39,082 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:54:39,656 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:55:06,027 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:55:06,619 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:55:43,255 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:55:43,871 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:57:14,191 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:57:14,773 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:58:53,490 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:58:54,624 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 12:59:03,412 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 12:59:04,255 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 13:00:39,834 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/admin.py changed, reloading.
+2023-12-15 13:00:40,524 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 13:03:52,934 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 13:03:53,746 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 13:07:01,017 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-15 13:07:02,061 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-15 13:07:14,068 [WARNING] django.request Method Not Allowed: /ru/shop/api/orders/upload_csv/
+2023-12-15 13:15:41,010 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-12-15 13:15:41,744 [INFO] django.utils.autoreload Watching for file changes with StatReloader

@@ -1,6 +1,3 @@
-from csv import DictReader
-from io import TextIOWrapper
-
 from django.contrib import admin
 from django.db import transaction
 from django.db.models import QuerySet
@@ -9,6 +6,7 @@ from django.shortcuts import render, redirect
 from django.urls import path
 
 from .admin_mixins import ExportAsCsvMixin
+from .common import save_csv_products, save_csv_orders
 from .forms import CSVImportForm
 from .models import Product, Order, ProductImage
 
@@ -88,17 +86,11 @@ class ProductAdmin(admin.ModelAdmin, ExportAsCsvMixin):
             }
             return render(request, "admin/csv_form.html", context, status=400)
 
-        csv_file = TextIOWrapper(
-            form.files["csv_file"].file,
+        save_csv_products(
+            file=form.files["csv_file"].file,
             encoding=request.encoding,
         )
-        reader = DictReader(csv_file)
 
-        products = [
-            Product(**row)
-            for row in reader
-        ]
-        Product.objects.bulk_create(products)
         self.message_user(request, "Data from CSV was imported.")
         return redirect("..")
 
@@ -148,23 +140,24 @@ class OrderAdmin(admin.ModelAdmin):
             }
             return render(request, "admin/csv_form.html", context, status=400)
 
-        csv_file = TextIOWrapper(
-            form.files["csv_file"].file,
+        save_csv_orders(
+            file=form.files["csv_file"].file,
             encoding=request.encoding,
         )
-        reader = DictReader(csv_file)
 
-        for row in reader:
-            order = Order(
-                delivery_address=row['delivery_address'],
-                promocode=row['promocode'],
-                user_id=row['user_id']
-            )
-            order.save()
-
-            products_pk = [int(pk) for pk in row['products'].split(', ')]
-
-            order.products.set(products_pk)
+        # reader = DictReader(csv_file)
+        #
+        # for row in reader:
+        #     order = Order(
+        #         delivery_address=row['delivery_address'],
+        #         promocode=row['promocode'],
+        #         user_id=row['user_id']
+        #     )
+        #     order.save()
+        #
+        #     products_pk = [int(pk) for pk in row['products'].split(', ')]
+        #
+        #     order.products.set(products_pk)
 
         self.message_user(request, "Data from CSV was successfully loaded")
         return redirect("..")
@@ -179,3 +172,5 @@ class OrderAdmin(admin.ModelAdmin):
             ),
         ]
         return new_urls + urls
+
+

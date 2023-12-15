@@ -3,7 +3,7 @@ from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse, JsonResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
 from django.urls import reverse, reverse_lazy
 from django.views import View
 from django.views.generic import CreateView, TemplateView, UpdateView, DetailView, ListView
@@ -48,7 +48,7 @@ class MyLogoutView(LogoutView):
 
 class UserDetailsView(DetailView):
     template_name = 'myauth/user-details.html'
-    model = User
+    model = get_user_model()
     context_object_name = "user"
 
 
