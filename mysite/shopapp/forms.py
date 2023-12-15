@@ -84,3 +84,7 @@ class ConfirmForm(forms.Form):
         if self.cleaned_data['confirm_action'] is False:
             raise ValidationError('You must confirm this form')
         return super(ConfirmForm, self).clean()
+
+
+class CSVImportForm(forms.Form):
+    csv_file = forms.FileField()

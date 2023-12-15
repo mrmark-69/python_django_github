@@ -1,29 +1,25 @@
-{% extends 'blogapp/base.html' %}
+{% extends "blogapp/base.html" %}
 {% load i18n %}
+
 {% block title %}
-{% translate 'Articles list'%}
+    Article #{{ object.pk }}
 {% endblock %}
 
 {% block body %}
-<h1> {% translate 'Articles' %}:</h1>
-{% if articles %}
-<div>
-    {% for article in articles %}
+<h1> {% translate 'Article' %}:</h1>
     <div>
         <h2>{% translate 'Title' %}: {{ article.title }}</h2>
-        <h3>{% translate 'Content' %}:<br> {{ article.content|slice:":250" }}...</h3>
+        <h3>{% translate 'Content' %}:<br> {{ article.content }}...</h3>
         <p>{% translate 'Pub_date' %}: {{ article.pub_date }}</p>
         <p>{% translate 'Author' %}: {{article.author.name }}</p>
         <p>{% translate 'Category' %}: {{ article.category.name }}</p>
         <p>{% translate 'Tags' %}:
             {% for tag in article.tags.all %}
                 {{ tag.name }}
-            {% endfor %}</p>
-        <br>
+            {% endfor %}
+        </p>
+        <p>
+        <a href="{% url 'blogapp:articles' %}"><< Back to articles list</a>
+        </p>
     </div>
-    {% endfor %}
-</div>
-{% else %}
-<h3>{% translate 'No articles yet' %}</h3>
-{% endif %}
 {% endblock %}
