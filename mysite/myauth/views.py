@@ -1,3 +1,5 @@
+from random import random
+
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
@@ -6,6 +8,7 @@ from django.http import HttpRequest, HttpResponse, JsonResponse
 from django.contrib.auth import authenticate, login, get_user_model
 from django.urls import reverse, reverse_lazy
 from django.views import View
+from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, TemplateView, UpdateView, DetailView, ListView
 
 from myauth.forms import RegisterUserForm, ProfileUpdateForm
@@ -110,9 +113,10 @@ def set_cookie_view(request: HttpRequest) -> HttpResponse:
     return response
 
 
+@cache_page(60 * 1)
 def get_cookie_view(request: HttpRequest) -> HttpResponse:
     value = request.COOKIES.get("fizz", "default value")
-    return HttpResponse(f"Cookie value: {value!r}")
+    return HttpResponse(f"Cookie value: {value!r} + {random()}")
 
 
 @permission_required("myauth.view_profile", raise_exception=True)

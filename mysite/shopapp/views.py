@@ -7,10 +7,13 @@ Different views for an online store: by product, order, etc.
 import os
 import logging
 from csv import DictWriter
+from typing import Any
 
 from django.contrib.auth.mixins import (LoginRequiredMixin,
                                         UserPassesTestMixin)
 from django.contrib.syndication.views import Feed
+from django.core.cache import cache
+from django.core.serializers import serialize
 from django.http import HttpResponse, HttpRequest, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.models import Group, User
@@ -18,7 +21,9 @@ from timeit import default_timer
 
 from django.urls import reverse_lazy
 from django.utils import timezone
+from django.utils.decorators import method_decorator
 from django.views import View
+from django.views.decorators.cache import cache_page
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django_filters.rest_framework import DjangoFilterBackend
 from drf_spectacular.utils import extend_schema, OpenApiResponse
@@ -38,6 +43,7 @@ log = logging.getLogger(__name__)
 
 
 class ShopIndexView(View):
+    # @method_decorator(cache_page(60))
     def get(self, request: HttpRequest) -> HttpResponse:
         products = [
             ('Laptop', 1999),
@@ -100,6 +106,10 @@ class ProductViewSet(ModelViewSet):
         "price",
         "discount"
     ]
+
+    @method_decorator(cache_page(30))
+    def list(self, *args, **kwargs):
+        return super().list(*args, **kwargs)
 
     @action(
         detail=False,
@@ -241,18 +251,37 @@ class ProductArchiveView(UserPassesTestMixin, DeleteView):
 
 class ProductDataExportView(View):
     def get(self, request: HttpRequest) -> JsonResponse:
-        products = Product.objects.order_by("pk").all()
-        products_data = [
-            {
-                "pk": product.pk,
-                "name": product.name,
-                "price": product.price,
-                "archived": product.archived,
-            }
-            for product in products
-        ]
+        cache_key = "products_data_export"
+        products_data = cache.get(cache_key)
 
+        if products_data is None:
+            products = Product.objects.order_by("pk").all()
+            products_data = [
+                {
+                    "pk": product.pk,
+                    "name": product.name,
+                    "price": product.price,
+                    "archived": product.archived,
+                }
+                for product in products
+            ]
+            cache.set(cache_key, products_data, 300)
         return JsonResponse({"products": products_data})
+
+
+class UserOrdersExportView(View):
+    def get(self, request, user_id):
+        user = get_object_or_404(User, pk=user_id)
+        cache_key = f"user_orders_{user_id}"
+        serialized_orders = cache.get(cache_key)
+
+        if serialized_orders is None:
+            orders = Order.objects.filter(user=user).order_by('pk')
+            serialized_orders = serialize('json', orders)
+
+            cache.set(cache_key, serialized_orders, 300)
+
+        return JsonResponse(serialized_orders, safe=False)
 
 
 class OrdersViewSet(ModelViewSet):
@@ -315,6 +344,22 @@ class OrdersViewSet(ModelViewSet):
             writer.writerow(order_data)
 
         return response
+
+
+class UserOrdersListView(LoginRequiredMixin, ListView):
+    template_name = 'shopapp/user_orders.html'
+    model = Order
+    context_object_name = 'orders'
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        self.owner = get_object_or_404(User, id=user_id)
+        return Order.objects.filter(user=self.owner)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['order_owner'] = self.owner
+        return context
 
 
 class OrdersListView(LoginRequiredMixin, ListView):

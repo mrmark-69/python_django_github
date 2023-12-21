@@ -1,11 +1,15 @@
 {% extends 'myauth/base.html' %}
-
+{% load cache %}
 {%  block title %}
     About me
 {% endblock %}
 {% block body %}
     <h1>User info:</h1>
+<div>
+    Items available: {% now 'u' %}
+</div>
 {% if user.is_authenticated %}
+    {% cache 300 userinfo user.username %}
     <h2>Detail</h2>
     <p>Username: {{ user.username }}</p>
     <p>First name: {{ user.first_name }}</p>
@@ -17,6 +21,7 @@
     {% else %}
         The user did not upload a photo
     {% endif %}
+    {% endcache %}
 {% else %}
     <h2>User is anonymous</h2>
 {% endif %}

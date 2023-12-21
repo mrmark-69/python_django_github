@@ -145,20 +145,6 @@ class OrderAdmin(admin.ModelAdmin):
             encoding=request.encoding,
         )
 
-        # reader = DictReader(csv_file)
-        #
-        # for row in reader:
-        #     order = Order(
-        #         delivery_address=row['delivery_address'],
-        #         promocode=row['promocode'],
-        #         user_id=row['user_id']
-        #     )
-        #     order.save()
-        #
-        #     products_pk = [int(pk) for pk in row['products'].split(', ')]
-        #
-        #     order.products.set(products_pk)
-
         self.message_user(request, "Data from CSV was successfully loaded")
         return redirect("..")
 
@@ -172,5 +158,3 @@ class OrderAdmin(admin.ModelAdmin):
             ),
         ]
         return new_urls + urls
-
-
