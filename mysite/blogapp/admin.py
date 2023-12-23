@@ -9,7 +9,7 @@ admin.site.register(Tag)
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = "id", "title", "content_short", "pub_date", "author_name", "articles_category",
+    list_display = "id", "title", "content_short", "pub_date", "author_name", "articles_category", "published"
     list_display_links = "id", "title",
     ordering = "id", "title",
     search_fields = "title", "author", "id"

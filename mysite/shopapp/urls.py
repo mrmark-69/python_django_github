@@ -24,6 +24,8 @@ urlpatterns = [
     path("products/latest/feed/", LatestProductsFeed(), name="products-feed"),
 
     path("orders/", views.OrdersListView.as_view(), name="orders_list"),
+    path("user/<int:user_id>/orders/", views.UserOrdersListView.as_view(), name="user_orders_list"),
+    path('user/<int:user_id>/orders/export/', views.UserOrdersExportView.as_view(), name='export_user_orders'),
     path("orders/export/", views.OrdersExportView.as_view(), name="orders_export"),
     path("orders/<int:pk>", views.OrderDetailView.as_view(), name="order_details"),
     path("orders/create/", views.OrderCreateView.as_view(), name="order_create"),
