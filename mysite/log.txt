@@ -3950,3 +3950,122 @@ Traceback (most recent call last):
 TypeError: View.__init__() takes 1 positional argument but 2 were given
 2023-12-21 23:42:22,686 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 2023-12-21 23:42:23,153 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:48:35,937 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-21 23:48:36,768 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:50:59,905 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-21 23:51:00,372 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:51:07,541 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-21 23:53:08,304 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-21 23:53:08,748 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:53:17,688 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-21 23:53:45,336 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:53:50,490 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-21 23:54:32,089 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-21 23:54:32,718 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-21 23:54:37,170 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-21 23:54:42,929 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-21 23:55:39,549 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-21 23:55:40,080 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-22 00:01:22,028 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-22 00:01:22,475 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-22 00:10:40,342 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-22 00:10:40,841 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-22 00:11:06,473 [ERROR] django.request Internal Server Error: /ru/shop/user/12/orders/
+Traceback (most recent call last):
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/sentry_sdk/integrations/django/views.py", line 84, in sentry_wrapped_callback
+    return callback(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/venv/lib/python3.11/site-packages/django/views/generic/base.py", line 97, in view
+    self = cls(**initkwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py", line 355, in __init__
+    super().__init__(kwargs)
+TypeError: View.__init__() takes 1 positional argument but 2 were given
+2023-12-22 00:12:49,392 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
+2023-12-22 00:12:49,876 [INFO] django.utils.autoreload Watching for file changes with StatReloader

@@ -351,6 +351,10 @@ class UserOrdersListView(LoginRequiredMixin, ListView):
     model = Order
     context_object_name = 'orders'
 
+    def __init__(self, **kwargs: Any):
+        super().__init__(**kwargs)
+        self.owner = None
+
     def get_queryset(self):
         user_id = self.kwargs['user_id']
         self.owner = get_object_or_404(User, id=user_id)
