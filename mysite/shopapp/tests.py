@@ -4,8 +4,8 @@ from django.contrib.auth.models import User, Permission
 from django.test import TestCase
 from django.urls import reverse
 
-from mysite import settings
-from shopapp.models import Product, Order
+from mysite.mysite import settings
+from mysite.shopapp.models import Product, Order
 
 
 class ShopIndexTestCase(TestCase):

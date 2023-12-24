@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from blogapp.models import Article
+from .models import Article
 
 
 class BlogSitemap(Sitemap):

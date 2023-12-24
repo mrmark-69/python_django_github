@@ -4069,3 +4069,245 @@ Traceback (most recent call last):
 TypeError: View.__init__() takes 1 positional argument but 2 were given
 2023-12-22 00:12:49,392 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/views.py changed, reloading.
 2023-12-22 00:12:49,876 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 11:56:55,163 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 11:58:39,776 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 11:58:49,118 [WARNING] django.request Not Found: /ru/shop/user/12/orders/export/
+2023-12-24 11:58:49,206 [WARNING] django.request Not Found: /favicon.ico
+2023-12-24 11:58:49,215 [WARNING] django.request Not Found: /favicon.ico
+2023-12-24 11:58:51,797 [WARNING] django.request Not Found: /ru/shop/user/12/orders/export/
+2023-12-24 11:59:21,457 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 11:59:21,460 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 11:59:21,466 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 11:59:21,470 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 11:59:21,479 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 11:59:21,485 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 11:59:21,489 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 11:59:24,073 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 11:59:24,083 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 11:59:24,086 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 11:59:24,088 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 11:59:24,091 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 11:59:24,094 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 11:59:24,103 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 11:59:27,366 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 11:59:27,368 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 11:59:27,370 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 11:59:27,374 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 11:59:27,377 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 11:59:27,382 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 11:59:27,396 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:30,297 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:04:36,014 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:36,016 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:36,025 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:36,029 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:36,031 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:36,034 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:36,047 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:38,208 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:38,220 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:38,223 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:38,225 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:38,228 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:38,230 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:38,245 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:41,210 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:41,212 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:41,215 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:41,230 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:41,233 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:41,238 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:41,241 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:42,304 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:42,314 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:42,317 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:42,319 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:42,322 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:42,329 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:42,340 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:44,122 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:44,125 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:44,131 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:44,134 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:44,136 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:44,139 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:44,153 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:04:45,933 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:04:45,977 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:04:45,980 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:04:45,982 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:04:45,984 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:04:45,986 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:04:45,997 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:05:03,488 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:05:03,491 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:05:03,494 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:05:03,521 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:05:03,522 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:05:03,614 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:05:03,616 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:05:09,715 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:05:09,718 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:05:09,721 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:05:09,723 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:05:09,729 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:05:09,731 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:05:09,752 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:05:22,783 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:05:22,785 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:05:22,788 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:05:22,790 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:05:22,792 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:05:22,794 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:05:22,804 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:05:24,691 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:05:24,693 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:05:24,695 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:05:24,704 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:05:24,706 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:05:24,708 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:05:24,718 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:08:20,974 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:08:20,981 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:08:20,984 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:08:20,986 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:08:20,988 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:08:20,992 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:08:21,003 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:08:23,104 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:08:23,106 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:08:23,112 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:08:23,115 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:08:23,119 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:08:23,125 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:08:23,130 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:08:30,534 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:08:30,537 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:08:30,539 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:08:30,565 [WARNING] django.request Not Found: /static/admin/css/login.css
+2023-12-24 12:08:30,567 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:08:30,657 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:08:30,658 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:08:32,250 [WARNING] django.request Not Found: /
+2023-12-24 12:08:46,798 [INFO] shopapp.views Rendering shop index
+2023-12-24 12:11:11,208 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-12-24 12:11:11,709 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:12:30,401 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:07,538 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:27,139 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-12-24 12:21:27,591 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:27,937 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/common.py changed, reloading.
+2023-12-24 12:21:28,354 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:33,583 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:42,913 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/admin.py changed, reloading.
+2023-12-24 12:21:42,996 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/admin.py changed, reloading.
+2023-12-24 12:21:43,351 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:43,430 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:51,751 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/admin.py changed, reloading.
+2023-12-24 12:21:52,226 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:21:52,674 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/admin.py changed, reloading.
+2023-12-24 12:21:53,102 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:04,731 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/sitemaps.py changed, reloading.
+2023-12-24 12:22:04,925 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/mysite/sitemaps.py changed, reloading.
+2023-12-24 12:22:05,210 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:05,390 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:15,829 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2023-12-24 12:22:16,021 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/sitemap.py changed, reloading.
+2023-12-24 12:22:16,281 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:16,470 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:37,288 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-12-24 12:22:37,437 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/views.py changed, reloading.
+2023-12-24 12:22:37,751 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:37,901 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:47,399 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-12-24 12:22:47,569 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/myauth/forms.py changed, reloading.
+2023-12-24 12:22:47,881 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:48,072 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:56,492 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/serializers.py changed, reloading.
+2023-12-24 12:22:56,665 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/shopapp/serializers.py changed, reloading.
+2023-12-24 12:22:56,954 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:22:57,120 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:23:06,589 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/urls.py changed, reloading.
+2023-12-24 12:23:06,735 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/urls.py changed, reloading.
+2023-12-24 12:23:07,050 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:23:07,203 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:23:15,651 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/views.py changed, reloading.
+2023-12-24 12:23:15,802 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django/mysite/blogapp/views.py changed, reloading.
+2023-12-24 12:23:16,144 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:23:16,293 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:28:05,170 [WARNING] django.request Not Found: /ru/shop/user/12/orders/
+2023-12-24 12:28:17,781 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:28:17,783 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:28:17,786 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:28:17,810 [WARNING] django.request Not Found: /static/admin/css/dashboard.css
+2023-12-24 12:28:17,812 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:28:17,899 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:28:17,901 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:28:32,724 [WARNING] django.request Not Found: /
+2023-12-24 12:28:36,039 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:28:36,041 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:28:36,043 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:28:36,048 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:28:36,054 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:28:36,063 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:31:39,042 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 12:31:51,775 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 12:31:56,065 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:31:56,068 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:31:56,071 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:31:56,073 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:31:56,079 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:31:56,085 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:32:00,442 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:32:00,444 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:32:00,449 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:32:00,450 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:32:00,456 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:32:00,458 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:32:02,415 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:32:02,429 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:32:02,431 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:32:02,432 [WARNING] django.request Not Found: /static/admin/css/dashboard.css
+2023-12-24 12:32:02,435 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:32:02,439 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:32:02,446 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:32:14,193 [WARNING] django.request Not Found: /static/admin/css/base.css
+2023-12-24 12:32:14,202 [WARNING] django.request Not Found: /static/admin/css/dark_mode.css
+2023-12-24 12:32:14,204 [WARNING] django.request Not Found: /static/admin/css/changelists.css
+2023-12-24 12:32:14,206 [WARNING] django.request Not Found: /static/admin/css/nav_sidebar.css
+2023-12-24 12:32:14,211 [WARNING] django.request Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-12-24 12:32:14,223 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:32:14,228 [WARNING] django.request Not Found: /static/admin/js/jquery.init.js
+2023-12-24 12:32:14,230 [WARNING] django.request Not Found: /static/admin/js/core.js
+2023-12-24 12:32:14,239 [WARNING] django.request Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+2023-12-24 12:32:14,244 [WARNING] django.request Not Found: /static/admin/js/actions.js
+2023-12-24 12:32:14,278 [WARNING] django.request Not Found: /static/admin/js/urlify.js
+2023-12-24 12:32:14,283 [WARNING] django.request Not Found: /static/admin/js/prepopulate.js
+2023-12-24 12:32:14,286 [WARNING] django.request Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-12-24 12:32:14,290 [WARNING] django.request Not Found: /static/admin/img/search.svg
+2023-12-24 12:32:14,296 [WARNING] django.request Not Found: /static/admin/img/icon-yes.svg
+2023-12-24 12:32:14,342 [WARNING] django.request Not Found: /static/admin/css/responsive.css
+2023-12-24 12:32:14,345 [WARNING] django.request Not Found: /static/admin/js/theme.js
+2023-12-24 12:32:14,347 [WARNING] django.request Not Found: /static/admin/js/nav_sidebar.js
+2023-12-24 12:32:14,352 [WARNING] django.request Not Found: /static/admin/js/filters.js
+2023-12-24 12:55:30,093 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 12:55:42,542 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 13:04:00,593 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 13:04:07,482 [WARNING] django.request Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-12-24 13:04:07,483 [WARNING] django.request Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-12-24 13:04:07,561 [WARNING] django.request Not Found: /static/admin/img/sorting-icons.svg
+2023-12-24 13:04:07,562 [WARNING] django.request Not Found: /static/admin/img/icon-addlink.svg
+2023-12-24 13:04:07,564 [WARNING] django.request Not Found: /static/admin/img/tooltag-add.svg
+2023-12-24 13:04:25,831 [WARNING] django.request Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-12-24 13:04:25,834 [WARNING] django.request Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-12-24 13:04:33,120 [WARNING] django.request Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+2023-12-24 13:04:33,122 [WARNING] django.request Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+2023-12-24 13:05:05,245 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 13:05:26,942 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 13:05:38,926 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/pythonProject/python_django/mysite/mysite/settings.py changed, reloading.
+2023-12-24 13:05:39,544 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 13:05:43,912 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 13:08:28,884 [WARNING] django.request Not Found: /ru/accounts/
+2023-12-24 13:09:00,330 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
+2023-12-24 13:26:19,709 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 13:26:32,803 [WARNING] django.request Not Found: /ru/accounts/
