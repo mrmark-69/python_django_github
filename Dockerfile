@@ -10,8 +10,9 @@ ENV PIP_ROOT_USER_ACTION=ignore
 
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
-RUN python manage.py collectstatic --noinput
 
 COPY mysite .
+
+RUN python manage.py collectstatic --noinput
 
 CMD ["gunicorn", "mysite.wsgi:application", "--bind", "0.0.0.0:8000"]
