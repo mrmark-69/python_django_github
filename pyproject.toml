@@ -12,6 +12,9 @@ django-filter = "^23.5"
 django-debug-toolbar = "^4.2.0"
 pillow = "^10.1.0"
 gunicorn = "^21.2.0"
+sentry-sdk = "1.37.1"
+django-extensions = "3.2.3"
+drf-spectacular = "0.26.5"
 
 
 [build-system]

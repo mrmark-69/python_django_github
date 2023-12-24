@@ -8,8 +8,10 @@ COPY requirements.txt .
 
 ENV PIP_ROOT_USER_ACTION=ignore
 
-RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip "poetry==1.7.1"
+RUN poetry config virtualenvs.create false --local
+COPY pyproject.toml poetry.lock ./
+RUN poetry install
 
 COPY mysite .
 

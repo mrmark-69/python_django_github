@@ -4565,3 +4565,16 @@ Traceback (most recent call last):
     return super().execute(query, params)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 django.db.utils.OperationalError: no such table: django_session
+2023-12-25 01:21:03,311 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-25 01:43:21,480 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-25 01:44:17,325 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-25 01:44:20,703 [WARNING] django.request Not Found: /
+2023-12-25 01:44:20,934 [WARNING] django.request Not Found: /favicon.ico
+2023-12-25 01:44:29,516 [WARNING] django.request Not Found: /media/avatars/avatar_1/avatar/Cartoon-Man-Avatar.webp
+2023-12-25 01:44:32,701 [WARNING] django.request Not Found: /media/avatars/avatar_1/avatar/Cartoon-Man-Avatar.webp
+2023-12-25 01:44:32,710 [WARNING] django.request Not Found: /media/avatars/avatar_2/avatar/Blueman.png
+2023-12-25 01:44:32,717 [WARNING] django.request Not Found: /media/avatars/avatar_4/avatar/people-juliane-krug-09b.webp
+2023-12-25 01:44:34,807 [WARNING] django.request Not Found: /media/avatars/avatar_2/avatar/Blueman.png
+2023-12-25 01:44:37,468 [WARNING] django.request Not Found: /media/avatars/avatar_1/avatar/Cartoon-Man-Avatar.webp
+2023-12-25 01:44:37,481 [WARNING] django.request Not Found: /media/avatars/avatar_2/avatar/Blueman.png
+2023-12-25 01:44:37,483 [WARNING] django.request Not Found: /media/avatars/avatar_4/avatar/people-juliane-krug-09b.webp
