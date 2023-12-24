@@ -4311,3 +4311,50 @@ TypeError: View.__init__() takes 1 positional argument but 2 were given
 2023-12-24 13:09:00,330 [WARNING] django.security.csrf Forbidden (CSRF token from POST incorrect.): /ru/accounts/login/
 2023-12-24 13:26:19,709 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-12-24 13:26:32,803 [WARNING] django.request Not Found: /ru/accounts/
+2023-12-24 20:13:58,853 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:14:59,839 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/common.py changed, reloading.
+2023-12-24 20:15:00,249 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:15:06,540 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/models.py changed, reloading.
+2023-12-24 20:15:06,937 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:15:40,485 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/models.py changed, reloading.
+2023-12-24 20:15:40,995 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:16:13,517 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/models.py changed, reloading.
+2023-12-24 20:16:13,944 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:16:45,472 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/common.py changed, reloading.
+2023-12-24 20:16:45,917 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:16:57,249 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/admin.py changed, reloading.
+2023-12-24 20:16:57,650 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:17:13,004 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/blogapp/admin.py changed, reloading.
+2023-12-24 20:17:13,519 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:17:31,156 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/urls.py changed, reloading.
+2023-12-24 20:17:31,566 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:24:44,487 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:25:56,506 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/sitemaps.py changed, reloading.
+2023-12-24 20:25:56,951 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:26:27,118 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/urls.py changed, reloading.
+2023-12-24 20:26:27,550 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:30:26,039 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/urls.py changed, reloading.
+2023-12-24 20:30:26,470 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:30:44,285 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/urls.py changed, reloading.
+2023-12-24 20:30:44,749 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:32:23,996 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/mysite/urls.py changed, reloading.
+2023-12-24 20:32:24,444 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:34:21,479 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/views.py changed, reloading.
+2023-12-24 20:34:21,916 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:35:13,678 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/urls.py changed, reloading.
+2023-12-24 20:35:14,122 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:36:23,457 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:40:02,345 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:40:43,640 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:42:00,547 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/urls.py changed, reloading.
+2023-12-24 20:42:00,986 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:42:28,832 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/forms.py changed, reloading.
+2023-12-24 20:42:29,253 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:42:48,002 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/views.py changed, reloading.
+2023-12-24 20:42:48,425 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:43:01,102 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/serializers.py changed, reloading.
+2023-12-24 20:43:01,546 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:43:19,355 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/blogapp/urls.py changed, reloading.
+2023-12-24 20:43:19,805 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2023-12-24 20:43:28,265 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/blogapp/views.py changed, reloading.
+2023-12-24 20:43:28,728 [INFO] django.utils.autoreload Watching for file changes with StatReloader

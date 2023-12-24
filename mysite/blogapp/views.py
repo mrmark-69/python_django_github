@@ -2,7 +2,7 @@ from django.contrib.syndication.views import Feed
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView
 
-from models import Article
+from .models import Article
 
 
 class ArticlesListView(ListView):

@@ -1,6 +1,6 @@
 from django.urls import path
 
-from views import ArticlesListView, ArticleDetailView, LatestArticlesFeed
+from .views import ArticlesListView, ArticleDetailView, LatestArticlesFeed
 
 app_name = 'blogapp'
 

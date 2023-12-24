@@ -1,19 +1,19 @@
 from random import random
 
+from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.contrib.auth.views import LogoutView
 from django.http import HttpRequest, HttpResponse, JsonResponse
-from django.contrib.auth import authenticate, login, get_user_model
-from django.urls import reverse, reverse_lazy
+from django.urls import reverse_lazy
+from django.utils.translation import gettext_lazy as _, ngettext
 from django.views import View
 from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, TemplateView, UpdateView, DetailView, ListView
 
-from forms import RegisterUserForm, ProfileUpdateForm
-from models import Profile
-from django.utils.translation import gettext_lazy as _, ngettext
+from .forms import RegisterUserForm
+from .models import Profile
 
 
 class HelloView(View):
