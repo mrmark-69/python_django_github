@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from myauth.models import Profile
+from models import Profile
 
 
 @admin.register(Profile)

@@ -22,7 +22,7 @@ from django.urls import path, include
 from django.conf.urls.i18n import i18n_patterns
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView, SpectacularRedocView
 
-from mysite.sitemaps import sitemaps
+from sitemaps import sitemaps
 
 urlpatterns = [
     path('admin/doc/', include('django.contrib.admindocs.urls')),

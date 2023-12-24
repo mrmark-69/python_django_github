@@ -11,8 +11,8 @@ from django.views import View
 from django.views.decorators.cache import cache_page
 from django.views.generic import CreateView, TemplateView, UpdateView, DetailView, ListView
 
-from myauth.forms import RegisterUserForm, ProfileUpdateForm
-from myauth.models import Profile
+from forms import RegisterUserForm, ProfileUpdateForm
+from models import Profile
 from django.utils.translation import gettext_lazy as _, ngettext
 
 

@@ -1,6 +1,6 @@
 from django.contrib.sitemaps import Sitemap
 
-from shopapp.models import Product
+from models import Product
 
 
 class ShopSitemap(Sitemap):
