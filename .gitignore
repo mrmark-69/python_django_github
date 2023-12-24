@@ -186,3 +186,4 @@ cython_debug/
 # Jetbrains Intellij IDEA
 >>>>>>> e81e02bf1fdd9180622ac6ed9065fbc30e935cfa
 .idea/
+/mysite/database/db.sqlite3
