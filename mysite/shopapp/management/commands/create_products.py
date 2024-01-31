@@ -1,9 +1,12 @@
 from django.core.management import BaseCommand
 from shopapp.models import Product
+
+
 class Command(BaseCommand):
     """
     Creates products
     """
+
     def handle(self, *args, **options):
         self.stdout.write("Create products")
 

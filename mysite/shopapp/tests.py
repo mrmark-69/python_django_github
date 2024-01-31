@@ -1,11 +1,9 @@
-import json
-
 from django.contrib.auth.models import User, Permission
 from django.test import TestCase
 from django.urls import reverse
 
-from mysite.mysite import settings
-from mysite.shopapp.models import Product, Order
+from .models import Product, Order
+from mysite import settings
 
 
 class ShopIndexTestCase(TestCase):

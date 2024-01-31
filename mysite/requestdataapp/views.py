@@ -5,8 +5,7 @@ from django.shortcuts import render
 from .forms import UserBioForm, UploadFileForm
 
 
-# Create your views here.
-def process_get_weiv(request: HttpRequest) -> HttpResponse:
+def process_get_view(request: HttpRequest) -> HttpResponse:
     a = request.GET.get("a", "")
     b = request.GET.get("b", "")
     result = a + b

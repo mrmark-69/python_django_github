@@ -1,11 +1,9 @@
-from typing import Sequence
 
-from django.contrib.auth.models import User
 from django.core.management import BaseCommand
 from django.db import transaction
-from django.db.models import Avg, Min, Max, Count, Sum
+from django.db.models import Count, Sum
 
-from shopapp.models import Order, Product
+from shopapp.models import Order
 
 
 class Command(BaseCommand):

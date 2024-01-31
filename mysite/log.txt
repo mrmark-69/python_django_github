@@ -4582,3 +4582,35 @@ django.db.utils.OperationalError: no such table: django_session
 2023-12-25 23:47:50,788 [INFO] django.utils.autoreload Watching for file changes with StatReloader
 2023-12-25 23:48:00,255 [WARNING] django.request Not Found: /favicon.ico
 2023-12-25 23:50:27,217 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:29:09,966 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:29:22,519 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/admin.py changed, reloading.
+2024-01-31 21:29:22,965 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:30:49,827 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:32:11,151 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/requestdataapp/urls.py changed, reloading.
+2024-01-31 21:32:11,591 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:32:26,550 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:32:38,162 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/requestdataapp/views.py changed, reloading.
+2024-01-31 21:32:38,654 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:33:00,610 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/views.py changed, reloading.
+2024-01-31 21:33:01,060 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:33:09,593 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/forms.py changed, reloading.
+2024-01-31 21:33:10,130 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:33:45,643 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/myauth/views.py changed, reloading.
+2024-01-31 21:33:46,099 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:34:03,008 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/views.py changed, reloading.
+2024-01-31 21:34:03,477 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:34:15,109 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/views.py changed, reloading.
+2024-01-31 21:34:15,599 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:34:24,099 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/views.py changed, reloading.
+2024-01-31 21:34:24,537 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:34:33,085 [INFO] django.utils.autoreload /home/mrmark/PycharmProjects/python_django_github/mysite/shopapp/views.py changed, reloading.
+2024-01-31 21:34:33,545 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:34:39,951 [WARNING] django.request Not Found: /
+2024-01-31 21:40:34,233 [INFO] django.utils.autoreload Watching for file changes with StatReloader
+2024-01-31 21:40:36,522 [WARNING] django.request Not Found: /
+2024-01-31 22:21:56,108 [WARNING] django.request Not Found: /en-us/shop/orders/1
+2024-01-31 22:21:58,396 [INFO] shopapp.views Rendering shop index
+2024-01-31 22:24:05,636 [WARNING] django.request Not Found: /en-us/shop/orders/1
+2024-01-31 22:24:07,812 [INFO] shopapp.views Rendering shop index
+2024-01-31 22:24:12,943 [WARNING] django.request Not Found: /en-us/accounts/foo-bar/
+2024-01-31 22:24:15,562 [INFO] shopapp.views Rendering shop index
